@@ -160,5 +160,44 @@
   <ItemGroup>
     <None Include="Resources\cerrar-con-llave.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondoINICIO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\INICIO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nombre.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FondoInicioNuevo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FondoInicioNuevo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Iconoreserva.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fechasconsulta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogOutIcono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogOutIcono1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogOutIcono2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogOutIcono3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cotizacion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ConsultaReservaciones.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
