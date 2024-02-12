@@ -199,5 +199,23 @@
   <ItemGroup>
     <None Include="Resources\ConsultaReservaciones.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FondoRegistroDeClientes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FondoRegistroDeClientes1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flecha-derecha.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flecha-izquierda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\facturacion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flecha-izquierda1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

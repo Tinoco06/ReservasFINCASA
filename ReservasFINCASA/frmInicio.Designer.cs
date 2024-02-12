@@ -42,9 +42,9 @@ namespace ReservasFINCASA
             this.btnReserva = new Guna.UI.WinForms.GunaAdvenceTileButton();
             this.AnimacionInicio = new Guna.UI.WinForms.GunaAnimateWindow(this.components);
             this.gunaDragControl1 = new Guna.UI.WinForms.GunaDragControl(this.components);
-            this.gunaDragControl2 = new Guna.UI.WinForms.GunaDragControl(this.components);
             this.panelInicio = new System.Windows.Forms.Panel();
             this.lblBienvenida = new Guna.UI.WinForms.GunaLabel();
+            this.gunaDragControl2 = new Guna.UI.WinForms.GunaDragControl(this.components);
             this.panelInicio.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,6 +57,7 @@ namespace ReservasFINCASA
             this.lblHora.Size = new System.Drawing.Size(192, 69);
             this.lblHora.TabIndex = 7;
             this.lblHora.Text = "label3";
+            this.lblHora.Click += new System.EventHandler(this.lblHora_Click);
             // 
             // lblFecha
             // 
@@ -261,10 +262,6 @@ namespace ReservasFINCASA
             // 
             this.gunaDragControl1.TargetControl = this.panelInicio;
             // 
-            // gunaDragControl2
-            // 
-            this.gunaDragControl2.TargetControl = this;
-            // 
             // panelInicio
             // 
             this.panelInicio.BackgroundImage = global::ReservasFINCASA.Properties.Resources.FondoInicioNuevo1;
@@ -285,6 +282,10 @@ namespace ReservasFINCASA
             this.lblBienvenida.Size = new System.Drawing.Size(205, 38);
             this.lblBienvenida.TabIndex = 19;
             this.lblBienvenida.Text = "¡Bienvenido!";
+            // 
+            // gunaDragControl2
+            // 
+            this.gunaDragControl2.TargetControl = this;
             // 
             // frmInicio
             // 

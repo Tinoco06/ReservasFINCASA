@@ -24,6 +24,21 @@ namespace ReservasFINCASA
 
         private void button1_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSiguiente_Click(object sender, EventArgs e)
+        {
             frmConsultaFechas calendario = new frmConsultaFechas();
             calendario.Show();
             this.Hide();
