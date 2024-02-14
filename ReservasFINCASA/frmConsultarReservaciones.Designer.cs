@@ -29,49 +29,50 @@ namespace ReservasFINCASA
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
             this.btnInicio = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(128, 194);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(888, 38);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Consulta de clientes con sus respectivas reservaciones.";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // btnInicio
             // 
-            this.btnInicio.Location = new System.Drawing.Point(523, 320);
+            this.btnInicio.Location = new System.Drawing.Point(787, 519);
+            this.btnInicio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnInicio.Name = "btnInicio";
-            this.btnInicio.Size = new System.Drawing.Size(187, 51);
+            this.btnInicio.Size = new System.Drawing.Size(140, 41);
             this.btnInicio.TabIndex = 6;
             this.btnInicio.Text = "Volver a inicio.";
             this.btnInicio.UseVisualStyleBackColor = true;
             this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
             // 
+            // panel1
+            // 
+            //this.panel1.BackgroundImage = global::ReservasFINCASA.Properties.Resources.BusquedaCliente2;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(586, 669);
+            this.panel1.TabIndex = 7;
+            // 
             // frmConsultarReservaciones
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1226, 583);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1142, 669);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnInicio);
-            this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmConsultarReservaciones";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmConsultarReservaciones";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnInicio;
+        private System.Windows.Forms.Panel panel1;
     }
 }

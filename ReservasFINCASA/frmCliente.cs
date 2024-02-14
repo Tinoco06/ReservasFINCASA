@@ -44,5 +44,17 @@ namespace ReservasFINCASA
             this.Hide();
 
         }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gunaAdvenceTileButton1_Click(object sender, EventArgs e)
+        {
+            frmInicio inicio = new frmInicio();
+            inicio.Show();  
+            this.Hide();
+        }
     }
 }

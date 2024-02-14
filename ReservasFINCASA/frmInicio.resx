@@ -117,11 +117,8 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="horafecha.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="gunaAdvenceTileButton1.CheckedImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnSalir.CheckedImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADQAAAA0CAYAAADFeBvrAAAABGdBTUEAALGPC/xhBQAABmhJREFUaEPt
         mmnIFVUYx181cy0z0cpAEcrASltIgkoxIZBs3xeivvSpqEwr2vcNCb9F9KFS2iPbrLBI2jAoioqsaKW0
@@ -154,7 +151,7 @@
         5ZyDggfzZv7bDAz8C67YqxkEgE5XAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="btnCotizar.CheckedImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnConsultaReserva.CheckedImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADQAAAA0CAYAAADFeBvrAAAABGdBTUEAALGPC/xhBQAABmhJREFUaEPt
         mmnIFVUYx181cy0z0cpAEcrASltIgkoxIZBs3xeivvSpqEwr2vcNCb9F9KFS2iPbrLBI2jAoioqsaKW0
@@ -187,7 +184,7 @@
         5ZyDggfzZv7bDAz8C67YqxkEgE5XAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="btnConsultarFechas.CheckedImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnFechas.CheckedImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADQAAAA0CAYAAADFeBvrAAAABGdBTUEAALGPC/xhBQAABmhJREFUaEPt
         mmnIFVUYx181cy0z0cpAEcrASltIgkoxIZBs3xeivvSpqEwr2vcNCb9F9KFS2iPbrLBI2jAoioqsaKW0
@@ -220,7 +217,7 @@
         5ZyDggfzZv7bDAz8C67YqxkEgE5XAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="btnReserva.CheckedImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnCotizacion.CheckedImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADQAAAA0CAYAAADFeBvrAAAABGdBTUEAALGPC/xhBQAABmhJREFUaEPt
         mmnIFVUYx181cy0z0cpAEcrASltIgkoxIZBs3xeivvSpqEwr2vcNCb9F9KFS2iPbrLBI2jAoioqsaKW0
@@ -253,13 +250,7 @@
         5ZyDggfzZv7bDAz8C67YqxkEgE5XAAAAAElFTkSuQmCC
 </value>
   </data>
-  <metadata name="AnimacionInicio.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>124, 17</value>
-  </metadata>
-  <metadata name="gunaDragControl1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>300, 17</value>
-  </metadata>
-  <metadata name="gunaDragControl2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>452, 17</value>
+  <metadata name="FechayHora.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
   </metadata>
 </root>

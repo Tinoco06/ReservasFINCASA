@@ -33,6 +33,7 @@ namespace ReservasFINCASA
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.gunaAnimateWindow1 = new Guna.UI.WinForms.GunaAnimateWindow(this.components);
             this.gunaDragControl1 = new Guna.UI.WinForms.GunaDragControl(this.components);
+            this.panel1 = new System.Windows.Forms.Panel();
             this.gunaDragControl2 = new Guna.UI.WinForms.GunaDragControl(this.components);
             this.txtUsuario = new Guna.UI.WinForms.GunaTextBox();
             this.txtPassword = new Guna.UI.WinForms.GunaTextBox();
@@ -42,7 +43,6 @@ namespace ReservasFINCASA
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gunaAdvenceButton1 = new Guna.UI.WinForms.GunaAdvenceButton();
-            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -56,6 +56,18 @@ namespace ReservasFINCASA
             // gunaDragControl1
             // 
             this.gunaDragControl1.TargetControl = this.panel1;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BackgroundImage = global::ReservasFINCASA.Properties.Resources.cabanhaInicio;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(538, 474);
+            this.panel1.TabIndex = 2;
+            this.panel1.Tag = "Cabaña de FINCASA.";
             // 
             // gunaDragControl2
             // 
@@ -73,7 +85,7 @@ namespace ReservasFINCASA
             this.txtUsuario.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txtUsuario.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsuario.Location = new System.Drawing.Point(600, 175);
-            this.txtUsuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.PasswordChar = '\0';
             this.txtUsuario.Radius = 20;
@@ -92,7 +104,7 @@ namespace ReservasFINCASA
             this.txtPassword.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txtPassword.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.Location = new System.Drawing.Point(600, 241);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(2);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '●';
             this.txtPassword.Radius = 20;
@@ -132,7 +144,7 @@ namespace ReservasFINCASA
             this.gunaControlBox1.IconColor = System.Drawing.Color.Black;
             this.gunaControlBox1.IconSize = 15F;
             this.gunaControlBox1.Location = new System.Drawing.Point(886, 1);
-            this.gunaControlBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gunaControlBox1.Margin = new System.Windows.Forms.Padding(2);
             this.gunaControlBox1.Name = "gunaControlBox1";
             this.gunaControlBox1.OnHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(58)))), ((int)(((byte)(183)))));
             this.gunaControlBox1.OnHoverIconColor = System.Drawing.Color.White;
@@ -197,18 +209,6 @@ namespace ReservasFINCASA
             this.gunaAdvenceButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.gunaAdvenceButton1.Click += new System.EventHandler(this.gunaAdvenceButton1_Click);
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.BackgroundImage = global::ReservasFINCASA.Properties.Resources.Login;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(538, 474);
-            this.panel1.TabIndex = 2;
-            this.panel1.Tag = "Cabaña de FINCASA.";
-            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -224,7 +224,7 @@ namespace ReservasFINCASA
             this.Controls.Add(this.gunaAdvenceButton1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";

@@ -31,287 +31,244 @@ namespace ReservasFINCASA
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInicio));
-            this.lblHora = new System.Windows.Forms.Label();
-            this.lblFecha = new System.Windows.Forms.Label();
-            this.horafecha = new System.Windows.Forms.Timer(this.components);
-            this.gunaControlBox1 = new Guna.UI.WinForms.GunaControlBox();
-            this.gunaAdvenceTileButton1 = new Guna.UI.WinForms.GunaAdvenceTileButton();
-            this.btnCotizar = new Guna.UI.WinForms.GunaAdvenceTileButton();
-            this.btnLogOut = new Guna.UI.WinForms.GunaAdvenceTileButton();
-            this.btnConsultarFechas = new Guna.UI.WinForms.GunaAdvenceTileButton();
-            this.btnReserva = new Guna.UI.WinForms.GunaAdvenceTileButton();
-            this.AnimacionInicio = new Guna.UI.WinForms.GunaAnimateWindow(this.components);
-            this.gunaDragControl1 = new Guna.UI.WinForms.GunaDragControl(this.components);
-            this.panelInicio = new System.Windows.Forms.Panel();
-            this.lblBienvenida = new Guna.UI.WinForms.GunaLabel();
-            this.gunaDragControl2 = new Guna.UI.WinForms.GunaDragControl(this.components);
-            this.panelInicio.SuspendLayout();
+            this.panelMenu = new System.Windows.Forms.Panel();
+            this.LabelHora = new System.Windows.Forms.Label();
+            this.LabelFecha = new System.Windows.Forms.Label();
+            this.FechayHora = new System.Windows.Forms.Timer(this.components);
+            this.btnSalir = new Guna.UI.WinForms.GunaAdvenceTileButton();
+            this.btnConsultaReserva = new Guna.UI.WinForms.GunaAdvenceTileButton();
+            this.btnFechas = new Guna.UI.WinForms.GunaAdvenceTileButton();
+            this.btnReservacion = new Guna.UI.WinForms.GunaAdvenceTileButton();
+            this.btnCotizacion = new Guna.UI.WinForms.GunaAdvenceTileButton();
+            this.panelFondo = new System.Windows.Forms.Panel();
+            this.panelMenu.SuspendLayout();
             this.SuspendLayout();
             // 
-            // lblHora
+            // panelMenu
             // 
-            this.lblHora.AutoSize = true;
-            this.lblHora.Font = new System.Drawing.Font("Gadugi", 42.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHora.Location = new System.Drawing.Point(817, 31);
-            this.lblHora.Name = "lblHora";
-            this.lblHora.Size = new System.Drawing.Size(192, 69);
-            this.lblHora.TabIndex = 7;
-            this.lblHora.Text = "label3";
-            this.lblHora.Click += new System.EventHandler(this.lblHora_Click);
+            this.panelMenu.Controls.Add(this.btnSalir);
+            this.panelMenu.Controls.Add(this.LabelFecha);
+            this.panelMenu.Controls.Add(this.LabelHora);
+            this.panelMenu.Controls.Add(this.btnConsultaReserva);
+            this.panelMenu.Controls.Add(this.btnFechas);
+            this.panelMenu.Controls.Add(this.btnReservacion);
+            this.panelMenu.Controls.Add(this.btnCotizacion);
+            this.panelMenu.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panelMenu.Location = new System.Drawing.Point(698, 0);
+            this.panelMenu.Name = "panelMenu";
+            this.panelMenu.Size = new System.Drawing.Size(428, 630);
+            this.panelMenu.TabIndex = 1;
             // 
-            // lblFecha
+            // LabelHora
             // 
-            this.lblFecha.AutoSize = true;
-            this.lblFecha.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFecha.Location = new System.Drawing.Point(795, 113);
-            this.lblFecha.Name = "lblFecha";
-            this.lblFecha.Size = new System.Drawing.Size(61, 22);
-            this.lblFecha.TabIndex = 8;
-            this.lblFecha.Text = "label4";
+            this.LabelHora.AutoSize = true;
+            this.LabelHora.Font = new System.Drawing.Font("Gadugi", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelHora.Location = new System.Drawing.Point(165, 31);
+            this.LabelHora.Name = "LabelHora";
+            this.LabelHora.Size = new System.Drawing.Size(93, 32);
+            this.LabelHora.TabIndex = 5;
+            this.LabelHora.Text = "label1";
             // 
-            // horafecha
+            // LabelFecha
             // 
-            this.horafecha.Enabled = true;
-            this.horafecha.Tick += new System.EventHandler(this.horafecha_Tick);
+            this.LabelFecha.AutoSize = true;
+            this.LabelFecha.Font = new System.Drawing.Font("Gadugi", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelFecha.Location = new System.Drawing.Point(72, 88);
+            this.LabelFecha.Name = "LabelFecha";
+            this.LabelFecha.Size = new System.Drawing.Size(71, 25);
+            this.LabelFecha.TabIndex = 6;
+            this.LabelFecha.Text = "label1";
             // 
-            // gunaControlBox1
+            // FechayHora
             // 
-            this.gunaControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.gunaControlBox1.AnimationHoverSpeed = 0.07F;
-            this.gunaControlBox1.AnimationSpeed = 0.03F;
-            this.gunaControlBox1.IconColor = System.Drawing.Color.Black;
-            this.gunaControlBox1.IconSize = 15F;
-            this.gunaControlBox1.Location = new System.Drawing.Point(1113, 0);
-            this.gunaControlBox1.Name = "gunaControlBox1";
-            this.gunaControlBox1.OnHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(58)))), ((int)(((byte)(183)))));
-            this.gunaControlBox1.OnHoverIconColor = System.Drawing.Color.White;
-            this.gunaControlBox1.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaControlBox1.Size = new System.Drawing.Size(45, 29);
-            this.gunaControlBox1.TabIndex = 13;
+            this.FechayHora.Enabled = true;
+            this.FechayHora.Tick += new System.EventHandler(this.FechayHora_Tick);
             // 
-            // gunaAdvenceTileButton1
+            // btnSalir
             // 
-            this.gunaAdvenceTileButton1.AnimationHoverSpeed = 0.07F;
-            this.gunaAdvenceTileButton1.AnimationSpeed = 0.03F;
-            this.gunaAdvenceTileButton1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaAdvenceTileButton1.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.gunaAdvenceTileButton1.BorderColor = System.Drawing.Color.Black;
-            this.gunaAdvenceTileButton1.CheckedBaseColor = System.Drawing.Color.Gray;
-            this.gunaAdvenceTileButton1.CheckedBorderColor = System.Drawing.Color.Black;
-            this.gunaAdvenceTileButton1.CheckedForeColor = System.Drawing.Color.White;
-            this.gunaAdvenceTileButton1.CheckedImage = ((System.Drawing.Image)(resources.GetObject("gunaAdvenceTileButton1.CheckedImage")));
-            this.gunaAdvenceTileButton1.CheckedLineColor = System.Drawing.Color.DimGray;
-            this.gunaAdvenceTileButton1.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaAdvenceTileButton1.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaAdvenceTileButton1.Font = new System.Drawing.Font("Gadugi", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaAdvenceTileButton1.ForeColor = System.Drawing.Color.White;
-            this.gunaAdvenceTileButton1.Image = global::ReservasFINCASA.Properties.Resources.ConsultaReservaciones;
-            this.gunaAdvenceTileButton1.ImageSize = new System.Drawing.Size(52, 52);
-            this.gunaAdvenceTileButton1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.gunaAdvenceTileButton1.Location = new System.Drawing.Point(965, 405);
-            this.gunaAdvenceTileButton1.Name = "gunaAdvenceTileButton1";
-            this.gunaAdvenceTileButton1.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.gunaAdvenceTileButton1.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaAdvenceTileButton1.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaAdvenceTileButton1.OnHoverImage = null;
-            this.gunaAdvenceTileButton1.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.gunaAdvenceTileButton1.OnPressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.gunaAdvenceTileButton1.Radius = 15;
-            this.gunaAdvenceTileButton1.Size = new System.Drawing.Size(126, 130);
-            this.gunaAdvenceTileButton1.TabIndex = 17;
-            this.gunaAdvenceTileButton1.Text = "Consultar reservas";
-            this.gunaAdvenceTileButton1.Click += new System.EventHandler(this.gunaAdvenceTileButton1_Click_1);
+            this.btnSalir.AnimationHoverSpeed = 0.07F;
+            this.btnSalir.AnimationSpeed = 0.03F;
+            this.btnSalir.BackColor = System.Drawing.Color.Transparent;
+            this.btnSalir.BaseColor = System.Drawing.Color.Transparent;
+            this.btnSalir.BorderColor = System.Drawing.Color.Black;
+            this.btnSalir.CheckedBaseColor = System.Drawing.Color.Gray;
+            this.btnSalir.CheckedBorderColor = System.Drawing.Color.Black;
+            this.btnSalir.CheckedForeColor = System.Drawing.Color.White;
+            this.btnSalir.CheckedImage = ((System.Drawing.Image)(resources.GetObject("btnSalir.CheckedImage")));
+            this.btnSalir.CheckedLineColor = System.Drawing.Color.DimGray;
+            this.btnSalir.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnSalir.FocusedColor = System.Drawing.Color.Empty;
+            this.btnSalir.Font = new System.Drawing.Font("Segoe UI Light", 15.75F);
+            this.btnSalir.ForeColor = System.Drawing.Color.White;
+            this.btnSalir.Image = global::ReservasFINCASA.Properties.Resources.SalirInicio;
+            this.btnSalir.ImageSize = new System.Drawing.Size(52, 52);
+            this.btnSalir.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.btnSalir.Location = new System.Drawing.Point(367, 567);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnSalir.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnSalir.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnSalir.OnHoverImage = null;
+            this.btnSalir.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.btnSalir.OnPressedColor = System.Drawing.Color.Black;
+            this.btnSalir.Size = new System.Drawing.Size(58, 60);
+            this.btnSalir.TabIndex = 7;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // btnCotizar
+            // btnConsultaReserva
             // 
-            this.btnCotizar.AnimationHoverSpeed = 0.07F;
-            this.btnCotizar.AnimationSpeed = 0.03F;
-            this.btnCotizar.BackColor = System.Drawing.Color.Transparent;
-            this.btnCotizar.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnCotizar.BorderColor = System.Drawing.Color.Black;
-            this.btnCotizar.CheckedBaseColor = System.Drawing.Color.Gray;
-            this.btnCotizar.CheckedBorderColor = System.Drawing.Color.Black;
-            this.btnCotizar.CheckedForeColor = System.Drawing.Color.White;
-            this.btnCotizar.CheckedImage = ((System.Drawing.Image)(resources.GetObject("btnCotizar.CheckedImage")));
-            this.btnCotizar.CheckedLineColor = System.Drawing.Color.DimGray;
-            this.btnCotizar.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnCotizar.FocusedColor = System.Drawing.Color.Empty;
-            this.btnCotizar.Font = new System.Drawing.Font("Gadugi", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCotizar.ForeColor = System.Drawing.Color.White;
-            this.btnCotizar.Image = global::ReservasFINCASA.Properties.Resources.Cotizacion;
-            this.btnCotizar.ImageSize = new System.Drawing.Size(52, 52);
-            this.btnCotizar.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.btnCotizar.Location = new System.Drawing.Point(775, 405);
-            this.btnCotizar.Name = "btnCotizar";
-            this.btnCotizar.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btnCotizar.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnCotizar.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnCotizar.OnHoverImage = null;
-            this.btnCotizar.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.btnCotizar.OnPressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnCotizar.Radius = 15;
-            this.btnCotizar.Size = new System.Drawing.Size(126, 130);
-            this.btnCotizar.TabIndex = 16;
-            this.btnCotizar.Text = "Realiza una cotización";
-            this.btnCotizar.Click += new System.EventHandler(this.btnCotizar_Click);
+            this.btnConsultaReserva.AnimationHoverSpeed = 0.07F;
+            this.btnConsultaReserva.AnimationSpeed = 0.03F;
+            this.btnConsultaReserva.BackColor = System.Drawing.Color.Transparent;
+            this.btnConsultaReserva.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.btnConsultaReserva.BorderColor = System.Drawing.Color.Black;
+            this.btnConsultaReserva.CheckedBaseColor = System.Drawing.Color.Gray;
+            this.btnConsultaReserva.CheckedBorderColor = System.Drawing.Color.Black;
+            this.btnConsultaReserva.CheckedForeColor = System.Drawing.Color.White;
+            this.btnConsultaReserva.CheckedImage = ((System.Drawing.Image)(resources.GetObject("btnConsultaReserva.CheckedImage")));
+            this.btnConsultaReserva.CheckedLineColor = System.Drawing.Color.DimGray;
+            this.btnConsultaReserva.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnConsultaReserva.FocusedColor = System.Drawing.Color.Empty;
+            this.btnConsultaReserva.Font = new System.Drawing.Font("Gadugi", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsultaReserva.ForeColor = System.Drawing.Color.White;
+            this.btnConsultaReserva.Image = global::ReservasFINCASA.Properties.Resources.BotonConsultaReserva;
+            this.btnConsultaReserva.ImageSize = new System.Drawing.Size(52, 52);
+            this.btnConsultaReserva.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.btnConsultaReserva.Location = new System.Drawing.Point(239, 349);
+            this.btnConsultaReserva.Name = "btnConsultaReserva";
+            this.btnConsultaReserva.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnConsultaReserva.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnConsultaReserva.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnConsultaReserva.OnHoverImage = null;
+            this.btnConsultaReserva.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.btnConsultaReserva.OnPressedColor = System.Drawing.Color.Black;
+            this.btnConsultaReserva.Radius = 50;
+            this.btnConsultaReserva.Size = new System.Drawing.Size(145, 145);
+            this.btnConsultaReserva.TabIndex = 4;
+            this.btnConsultaReserva.Text = "Consultar reservas";
+            this.btnConsultaReserva.Click += new System.EventHandler(this.btnConsultaReserva_Click);
             // 
-            // btnLogOut
+            // btnFechas
             // 
-            this.btnLogOut.AnimationHoverSpeed = 0.07F;
-            this.btnLogOut.AnimationSpeed = 0.03F;
-            this.btnLogOut.BaseColor = System.Drawing.Color.White;
-            this.btnLogOut.BorderColor = System.Drawing.Color.Black;
-            this.btnLogOut.CheckedBaseColor = System.Drawing.Color.Gray;
-            this.btnLogOut.CheckedBorderColor = System.Drawing.Color.Black;
-            this.btnLogOut.CheckedForeColor = System.Drawing.Color.White;
-            this.btnLogOut.CheckedImage = null;
-            this.btnLogOut.CheckedLineColor = System.Drawing.Color.DimGray;
-            this.btnLogOut.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnLogOut.FocusedColor = System.Drawing.Color.Empty;
-            this.btnLogOut.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogOut.ForeColor = System.Drawing.Color.Black;
-            this.btnLogOut.Image = global::ReservasFINCASA.Properties.Resources.LogOutIcono3;
-            this.btnLogOut.ImageSize = new System.Drawing.Size(52, 52);
-            this.btnLogOut.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnLogOut.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.btnLogOut.Location = new System.Drawing.Point(1092, 645);
-            this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.OnHoverBaseColor = System.Drawing.Color.White;
-            this.btnLogOut.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnLogOut.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnLogOut.OnHoverImage = null;
-            this.btnLogOut.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.btnLogOut.OnPressedColor = System.Drawing.Color.Black;
-            this.btnLogOut.Size = new System.Drawing.Size(66, 65);
-            this.btnLogOut.TabIndex = 15;
-            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
+            this.btnFechas.AnimationHoverSpeed = 0.07F;
+            this.btnFechas.AnimationSpeed = 0.03F;
+            this.btnFechas.BackColor = System.Drawing.Color.Transparent;
+            this.btnFechas.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.btnFechas.BorderColor = System.Drawing.Color.Black;
+            this.btnFechas.CheckedBaseColor = System.Drawing.Color.Gray;
+            this.btnFechas.CheckedBorderColor = System.Drawing.Color.Black;
+            this.btnFechas.CheckedForeColor = System.Drawing.Color.White;
+            this.btnFechas.CheckedImage = ((System.Drawing.Image)(resources.GetObject("btnFechas.CheckedImage")));
+            this.btnFechas.CheckedLineColor = System.Drawing.Color.DimGray;
+            this.btnFechas.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnFechas.FocusedColor = System.Drawing.Color.Empty;
+            this.btnFechas.Font = new System.Drawing.Font("Gadugi", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFechas.ForeColor = System.Drawing.Color.White;
+            this.btnFechas.Image = global::ReservasFINCASA.Properties.Resources.BotonConsultaCalendario;
+            this.btnFechas.ImageSize = new System.Drawing.Size(52, 52);
+            this.btnFechas.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.btnFechas.Location = new System.Drawing.Point(239, 175);
+            this.btnFechas.Name = "btnFechas";
+            this.btnFechas.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnFechas.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnFechas.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnFechas.OnHoverImage = null;
+            this.btnFechas.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.btnFechas.OnPressedColor = System.Drawing.Color.Black;
+            this.btnFechas.Radius = 50;
+            this.btnFechas.Size = new System.Drawing.Size(145, 145);
+            this.btnFechas.TabIndex = 2;
+            this.btnFechas.Text = "Consultar fechas";
+            this.btnFechas.Click += new System.EventHandler(this.btnFechas_Click);
             // 
-            // btnConsultarFechas
+            // btnReservacion
             // 
-            this.btnConsultarFechas.AnimationHoverSpeed = 0.07F;
-            this.btnConsultarFechas.AnimationSpeed = 0.03F;
-            this.btnConsultarFechas.BackColor = System.Drawing.Color.Transparent;
-            this.btnConsultarFechas.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnConsultarFechas.BorderColor = System.Drawing.Color.Black;
-            this.btnConsultarFechas.CheckedBaseColor = System.Drawing.Color.Gray;
-            this.btnConsultarFechas.CheckedBorderColor = System.Drawing.Color.Black;
-            this.btnConsultarFechas.CheckedForeColor = System.Drawing.Color.White;
-            this.btnConsultarFechas.CheckedImage = ((System.Drawing.Image)(resources.GetObject("btnConsultarFechas.CheckedImage")));
-            this.btnConsultarFechas.CheckedLineColor = System.Drawing.Color.DimGray;
-            this.btnConsultarFechas.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnConsultarFechas.FocusedColor = System.Drawing.Color.Empty;
-            this.btnConsultarFechas.Font = new System.Drawing.Font("Gadugi", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConsultarFechas.ForeColor = System.Drawing.Color.White;
-            this.btnConsultarFechas.Image = global::ReservasFINCASA.Properties.Resources.fechasconsulta;
-            this.btnConsultarFechas.ImageSize = new System.Drawing.Size(52, 52);
-            this.btnConsultarFechas.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.btnConsultarFechas.Location = new System.Drawing.Point(965, 205);
-            this.btnConsultarFechas.Name = "btnConsultarFechas";
-            this.btnConsultarFechas.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btnConsultarFechas.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnConsultarFechas.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnConsultarFechas.OnHoverImage = null;
-            this.btnConsultarFechas.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.btnConsultarFechas.OnPressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnConsultarFechas.Radius = 15;
-            this.btnConsultarFechas.Size = new System.Drawing.Size(126, 130);
-            this.btnConsultarFechas.TabIndex = 14;
-            this.btnConsultarFechas.Text = "Consultar fechas";
-            this.btnConsultarFechas.Click += new System.EventHandler(this.btnConsultarFechas_Click);
+            this.btnReservacion.AnimationHoverSpeed = 0.07F;
+            this.btnReservacion.AnimationSpeed = 0.03F;
+            this.btnReservacion.BackColor = System.Drawing.Color.Transparent;
+            this.btnReservacion.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.btnReservacion.BorderColor = System.Drawing.Color.Black;
+            this.btnReservacion.CheckedBaseColor = System.Drawing.Color.Gray;
+            this.btnReservacion.CheckedBorderColor = System.Drawing.Color.Black;
+            this.btnReservacion.CheckedForeColor = System.Drawing.Color.White;
+            this.btnReservacion.CheckedImage = global::ReservasFINCASA.Properties.Resources.BotonReserva;
+            this.btnReservacion.CheckedLineColor = System.Drawing.Color.DimGray;
+            this.btnReservacion.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnReservacion.FocusedColor = System.Drawing.Color.Empty;
+            this.btnReservacion.Font = new System.Drawing.Font("Gadugi", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReservacion.ForeColor = System.Drawing.Color.White;
+            this.btnReservacion.Image = global::ReservasFINCASA.Properties.Resources.BotonReserva;
+            this.btnReservacion.ImageSize = new System.Drawing.Size(52, 52);
+            this.btnReservacion.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.btnReservacion.Location = new System.Drawing.Point(56, 175);
+            this.btnReservacion.Name = "btnReservacion";
+            this.btnReservacion.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnReservacion.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnReservacion.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnReservacion.OnHoverImage = null;
+            this.btnReservacion.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.btnReservacion.OnPressedColor = System.Drawing.Color.Black;
+            this.btnReservacion.Radius = 50;
+            this.btnReservacion.Size = new System.Drawing.Size(145, 145);
+            this.btnReservacion.TabIndex = 1;
+            this.btnReservacion.Text = "Realizar una reservación";
+            this.btnReservacion.Click += new System.EventHandler(this.btnReservacion_Click);
             // 
-            // btnReserva
+            // btnCotizacion
             // 
-            this.btnReserva.AnimationHoverSpeed = 0.07F;
-            this.btnReserva.AnimationSpeed = 0.03F;
-            this.btnReserva.BackColor = System.Drawing.Color.Transparent;
-            this.btnReserva.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnReserva.BorderColor = System.Drawing.Color.Black;
-            this.btnReserva.CheckedBaseColor = System.Drawing.Color.Gray;
-            this.btnReserva.CheckedBorderColor = System.Drawing.Color.Black;
-            this.btnReserva.CheckedForeColor = System.Drawing.Color.White;
-            this.btnReserva.CheckedImage = ((System.Drawing.Image)(resources.GetObject("btnReserva.CheckedImage")));
-            this.btnReserva.CheckedLineColor = System.Drawing.Color.DimGray;
-            this.btnReserva.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnReserva.FocusedColor = System.Drawing.Color.Empty;
-            this.btnReserva.Font = new System.Drawing.Font("Gadugi", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReserva.ForeColor = System.Drawing.Color.White;
-            this.btnReserva.Image = global::ReservasFINCASA.Properties.Resources.Iconoreserva;
-            this.btnReserva.ImageSize = new System.Drawing.Size(52, 52);
-            this.btnReserva.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.btnReserva.Location = new System.Drawing.Point(775, 205);
-            this.btnReserva.Name = "btnReserva";
-            this.btnReserva.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btnReserva.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnReserva.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnReserva.OnHoverImage = null;
-            this.btnReserva.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.btnReserva.OnPressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnReserva.Radius = 15;
-            this.btnReserva.Size = new System.Drawing.Size(126, 130);
-            this.btnReserva.TabIndex = 12;
-            this.btnReserva.Text = "Realiza una reservación";
-            this.btnReserva.Click += new System.EventHandler(this.gunaAdvenceTileButton1_Click);
+            this.btnCotizacion.AnimationHoverSpeed = 0.07F;
+            this.btnCotizacion.AnimationSpeed = 0.03F;
+            this.btnCotizacion.BackColor = System.Drawing.Color.Transparent;
+            this.btnCotizacion.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.btnCotizacion.BorderColor = System.Drawing.Color.Black;
+            this.btnCotizacion.CheckedBaseColor = System.Drawing.Color.Gray;
+            this.btnCotizacion.CheckedBorderColor = System.Drawing.Color.Black;
+            this.btnCotizacion.CheckedForeColor = System.Drawing.Color.White;
+            this.btnCotizacion.CheckedImage = ((System.Drawing.Image)(resources.GetObject("btnCotizacion.CheckedImage")));
+            this.btnCotizacion.CheckedLineColor = System.Drawing.Color.DimGray;
+            this.btnCotizacion.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnCotizacion.FocusedColor = System.Drawing.Color.Empty;
+            this.btnCotizacion.Font = new System.Drawing.Font("Gadugi", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCotizacion.ForeColor = System.Drawing.Color.White;
+            this.btnCotizacion.Image = global::ReservasFINCASA.Properties.Resources.BotonCotizaciones;
+            this.btnCotizacion.ImageSize = new System.Drawing.Size(52, 52);
+            this.btnCotizacion.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.btnCotizacion.Location = new System.Drawing.Point(56, 349);
+            this.btnCotizacion.Name = "btnCotizacion";
+            this.btnCotizacion.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnCotizacion.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnCotizacion.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnCotizacion.OnHoverImage = null;
+            this.btnCotizacion.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
+            this.btnCotizacion.OnPressedColor = System.Drawing.Color.Black;
+            this.btnCotizacion.Radius = 50;
+            this.btnCotizacion.Size = new System.Drawing.Size(145, 145);
+            this.btnCotizacion.TabIndex = 3;
+            this.btnCotizacion.Text = "Realizar una cotización";
+            this.btnCotizacion.Click += new System.EventHandler(this.btnCotizacion_Click);
             // 
-            // AnimacionInicio
+            // panelFondo
             // 
-            this.AnimacionInicio.AnimationType = Guna.UI.WinForms.GunaAnimateWindow.AnimateWindowType.AW_BLEND;
-            this.AnimacionInicio.Interval = 900;
-            this.AnimacionInicio.TargetControl = this;
-            // 
-            // gunaDragControl1
-            // 
-            this.gunaDragControl1.TargetControl = this.panelInicio;
-            // 
-            // panelInicio
-            // 
-            this.panelInicio.BackgroundImage = global::ReservasFINCASA.Properties.Resources.FondoInicioNuevo1;
-            this.panelInicio.Controls.Add(this.lblBienvenida);
-            this.panelInicio.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelInicio.Location = new System.Drawing.Point(0, 0);
-            this.panelInicio.Name = "panelInicio";
-            this.panelInicio.Size = new System.Drawing.Size(713, 708);
-            this.panelInicio.TabIndex = 18;
-            // 
-            // lblBienvenida
-            // 
-            this.lblBienvenida.AutoSize = true;
-            this.lblBienvenida.BackColor = System.Drawing.Color.Transparent;
-            this.lblBienvenida.Font = new System.Drawing.Font("Gadugi", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBienvenida.Location = new System.Drawing.Point(27, 55);
-            this.lblBienvenida.Name = "lblBienvenida";
-            this.lblBienvenida.Size = new System.Drawing.Size(205, 38);
-            this.lblBienvenida.TabIndex = 19;
-            this.lblBienvenida.Text = "¡Bienvenido!";
-            // 
-            // gunaDragControl2
-            // 
-            this.gunaDragControl2.TargetControl = this;
+            this.panelFondo.BackgroundImage = global::ReservasFINCASA.Properties.Resources.Fondofincasa;
+            this.panelFondo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelFondo.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelFondo.Location = new System.Drawing.Point(0, 0);
+            this.panelFondo.Name = "panelFondo";
+            this.panelFondo.Size = new System.Drawing.Size(692, 630);
+            this.panelFondo.TabIndex = 0;
             // 
             // frmInicio
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1158, 708);
-            this.Controls.Add(this.gunaAdvenceTileButton1);
-            this.Controls.Add(this.btnCotizar);
-            this.Controls.Add(this.btnLogOut);
-            this.Controls.Add(this.btnConsultarFechas);
-            this.Controls.Add(this.gunaControlBox1);
-            this.Controls.Add(this.btnReserva);
-            this.Controls.Add(this.lblFecha);
-            this.Controls.Add(this.lblHora);
-            this.Controls.Add(this.panelInicio);
+            this.ClientSize = new System.Drawing.Size(1126, 630);
+            this.Controls.Add(this.panelMenu);
+            this.Controls.Add(this.panelFondo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmInicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.frmInicio_Load);
-            this.panelInicio.ResumeLayout(false);
-            this.panelInicio.PerformLayout();
+            this.panelMenu.ResumeLayout(false);
+            this.panelMenu.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -330,5 +287,15 @@ namespace ReservasFINCASA
         private Guna.UI.WinForms.GunaDragControl gunaDragControl2;
         private System.Windows.Forms.Panel panelInicio;
         private Guna.UI.WinForms.GunaLabel lblBienvenida;
+        private System.Windows.Forms.Panel panelFondo;
+        private Guna.UI.WinForms.GunaAdvenceTileButton btnReservacion;
+        private Guna.UI.WinForms.GunaAdvenceTileButton btnFechas;
+        private Guna.UI.WinForms.GunaAdvenceTileButton btnCotizacion;
+        private Guna.UI.WinForms.GunaAdvenceTileButton btnConsultaReserva;
+        private System.Windows.Forms.Panel panelMenu;
+        private System.Windows.Forms.Label LabelFecha;
+        private System.Windows.Forms.Label LabelHora;
+        private System.Windows.Forms.Timer FechayHora;
+        private Guna.UI.WinForms.GunaAdvenceTileButton btnSalir;
     }
 }
