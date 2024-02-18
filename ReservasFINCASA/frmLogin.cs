@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -54,17 +55,11 @@ namespace ReservasFINCASA
 
         private void btnIngresar_Click_1(object sender, EventArgs e)
         {
-            try
-            {
-                frmInicio inicio = new frmInicio();
-                inicio.Show();
+            frmInicio inicio = new frmInicio();
+            inicio.Show();
 
-                this.Hide();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Error al mostrar el formulario frmCliente: " + ex.Message);
-            }
+            this.Hide();
+
         }
     }
 }

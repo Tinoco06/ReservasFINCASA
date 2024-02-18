@@ -31,6 +31,13 @@ namespace ReservasFINCASA
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCliente));
             this.panelCliente = new System.Windows.Forms.Panel();
+            this.txtEmpresaCliente = new System.Windows.Forms.TextBox();
+            this.txtProcedenciaCliente = new System.Windows.Forms.TextBox();
+            this.txtEmailCliente = new System.Windows.Forms.TextBox();
+            this.txtApellidoCliente = new System.Windows.Forms.TextBox();
+            this.txtCelularCliente = new System.Windows.Forms.TextBox();
+            this.txtNombreCliente = new System.Windows.Forms.TextBox();
+            this.txtDNICliente = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -45,13 +52,6 @@ namespace ReservasFINCASA
             this.lblObligatorio = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
-            this.txtDNICliente = new System.Windows.Forms.TextBox();
-            this.txtNombreCliente = new System.Windows.Forms.TextBox();
-            this.txtCelularCliente = new System.Windows.Forms.TextBox();
-            this.txtApellidoCliente = new System.Windows.Forms.TextBox();
-            this.txtEmailCliente = new System.Windows.Forms.TextBox();
-            this.txtProcedenciaCliente = new System.Windows.Forms.TextBox();
-            this.txtEmpresaCliente = new System.Windows.Forms.TextBox();
             this.panelFondo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -95,6 +95,83 @@ namespace ReservasFINCASA
             this.panelCliente.TabIndex = 4;
             this.panelCliente.Paint += new System.Windows.Forms.PaintEventHandler(this.panelCliente_Paint);
             // 
+            // txtEmpresaCliente
+            // 
+            this.txtEmpresaCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtEmpresaCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtEmpresaCliente.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmpresaCliente.Location = new System.Drawing.Point(150, 514);
+            this.txtEmpresaCliente.Multiline = true;
+            this.txtEmpresaCliente.Name = "txtEmpresaCliente";
+            this.txtEmpresaCliente.Size = new System.Drawing.Size(186, 20);
+            this.txtEmpresaCliente.TabIndex = 7;
+            // 
+            // txtProcedenciaCliente
+            // 
+            this.txtProcedenciaCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtProcedenciaCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtProcedenciaCliente.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProcedenciaCliente.Location = new System.Drawing.Point(150, 446);
+            this.txtProcedenciaCliente.Multiline = true;
+            this.txtProcedenciaCliente.Name = "txtProcedenciaCliente";
+            this.txtProcedenciaCliente.Size = new System.Drawing.Size(186, 20);
+            this.txtProcedenciaCliente.TabIndex = 6;
+            // 
+            // txtEmailCliente
+            // 
+            this.txtEmailCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtEmailCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtEmailCliente.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmailCliente.Location = new System.Drawing.Point(150, 313);
+            this.txtEmailCliente.Multiline = true;
+            this.txtEmailCliente.Name = "txtEmailCliente";
+            this.txtEmailCliente.Size = new System.Drawing.Size(186, 20);
+            this.txtEmailCliente.TabIndex = 4;
+            // 
+            // txtApellidoCliente
+            // 
+            this.txtApellidoCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtApellidoCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtApellidoCliente.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtApellidoCliente.Location = new System.Drawing.Point(150, 249);
+            this.txtApellidoCliente.Multiline = true;
+            this.txtApellidoCliente.Name = "txtApellidoCliente";
+            this.txtApellidoCliente.Size = new System.Drawing.Size(186, 20);
+            this.txtApellidoCliente.TabIndex = 3;
+            // 
+            // txtCelularCliente
+            // 
+            this.txtCelularCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtCelularCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCelularCliente.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCelularCliente.Location = new System.Drawing.Point(151, 378);
+            this.txtCelularCliente.Multiline = true;
+            this.txtCelularCliente.Name = "txtCelularCliente";
+            this.txtCelularCliente.Size = new System.Drawing.Size(186, 20);
+            this.txtCelularCliente.TabIndex = 5;
+            // 
+            // txtNombreCliente
+            // 
+            this.txtNombreCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtNombreCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNombreCliente.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombreCliente.Location = new System.Drawing.Point(151, 181);
+            this.txtNombreCliente.Multiline = true;
+            this.txtNombreCliente.Name = "txtNombreCliente";
+            this.txtNombreCliente.Size = new System.Drawing.Size(186, 20);
+            this.txtNombreCliente.TabIndex = 2;
+            // 
+            // txtDNICliente
+            // 
+            this.txtDNICliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtDNICliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDNICliente.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDNICliente.Location = new System.Drawing.Point(151, 117);
+            this.txtDNICliente.Multiline = true;
+            this.txtDNICliente.Name = "txtDNICliente";
+            this.txtDNICliente.Size = new System.Drawing.Size(186, 20);
+            this.txtDNICliente.TabIndex = 1;
+            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -110,7 +187,7 @@ namespace ReservasFINCASA
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Red;
-            this.label11.Location = new System.Drawing.Point(343, 454);
+            this.label11.Location = new System.Drawing.Point(343, 450);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(16, 19);
             this.label11.TabIndex = 24;
@@ -120,7 +197,7 @@ namespace ReservasFINCASA
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(148, 427);
+            this.label10.Location = new System.Drawing.Point(148, 423);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(144, 17);
             this.label10.TabIndex = 23;
@@ -173,7 +250,7 @@ namespace ReservasFINCASA
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(148, 503);
+            this.label6.Location = new System.Drawing.Point(147, 494);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(160, 17);
             this.label6.TabIndex = 15;
@@ -243,83 +320,6 @@ namespace ReservasFINCASA
             this.lblNombre.TabIndex = 7;
             this.lblNombre.Text = "Nombre:";
             // 
-            // txtDNICliente
-            // 
-            this.txtDNICliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.txtDNICliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDNICliente.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDNICliente.Location = new System.Drawing.Point(151, 117);
-            this.txtDNICliente.Multiline = true;
-            this.txtDNICliente.Name = "txtDNICliente";
-            this.txtDNICliente.Size = new System.Drawing.Size(186, 20);
-            this.txtDNICliente.TabIndex = 1;
-            // 
-            // txtNombreCliente
-            // 
-            this.txtNombreCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.txtNombreCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtNombreCliente.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreCliente.Location = new System.Drawing.Point(151, 181);
-            this.txtNombreCliente.Multiline = true;
-            this.txtNombreCliente.Name = "txtNombreCliente";
-            this.txtNombreCliente.Size = new System.Drawing.Size(186, 20);
-            this.txtNombreCliente.TabIndex = 2;
-            // 
-            // txtCelularCliente
-            // 
-            this.txtCelularCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.txtCelularCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtCelularCliente.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCelularCliente.Location = new System.Drawing.Point(151, 378);
-            this.txtCelularCliente.Multiline = true;
-            this.txtCelularCliente.Name = "txtCelularCliente";
-            this.txtCelularCliente.Size = new System.Drawing.Size(186, 20);
-            this.txtCelularCliente.TabIndex = 5;
-            // 
-            // txtApellidoCliente
-            // 
-            this.txtApellidoCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.txtApellidoCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtApellidoCliente.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApellidoCliente.Location = new System.Drawing.Point(150, 249);
-            this.txtApellidoCliente.Multiline = true;
-            this.txtApellidoCliente.Name = "txtApellidoCliente";
-            this.txtApellidoCliente.Size = new System.Drawing.Size(186, 20);
-            this.txtApellidoCliente.TabIndex = 3;
-            // 
-            // txtEmailCliente
-            // 
-            this.txtEmailCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.txtEmailCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtEmailCliente.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmailCliente.Location = new System.Drawing.Point(150, 313);
-            this.txtEmailCliente.Multiline = true;
-            this.txtEmailCliente.Name = "txtEmailCliente";
-            this.txtEmailCliente.Size = new System.Drawing.Size(186, 20);
-            this.txtEmailCliente.TabIndex = 4;
-            // 
-            // txtProcedenciaCliente
-            // 
-            this.txtProcedenciaCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.txtProcedenciaCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtProcedenciaCliente.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtProcedenciaCliente.Location = new System.Drawing.Point(150, 450);
-            this.txtProcedenciaCliente.Multiline = true;
-            this.txtProcedenciaCliente.Name = "txtProcedenciaCliente";
-            this.txtProcedenciaCliente.Size = new System.Drawing.Size(186, 20);
-            this.txtProcedenciaCliente.TabIndex = 6;
-            // 
-            // txtEmpresaCliente
-            // 
-            this.txtEmpresaCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.txtEmpresaCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtEmpresaCliente.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmpresaCliente.Location = new System.Drawing.Point(151, 523);
-            this.txtEmpresaCliente.Multiline = true;
-            this.txtEmpresaCliente.Name = "txtEmpresaCliente";
-            this.txtEmpresaCliente.Size = new System.Drawing.Size(186, 20);
-            this.txtEmpresaCliente.TabIndex = 7;
-            // 
             // panelFondo
             // 
             this.panelFondo.BackgroundImage = global::ReservasFINCASA.Properties.Resources.FondoDeClientes;
@@ -376,7 +376,7 @@ namespace ReservasFINCASA
             this.btnSiguiente.Image = global::ReservasFINCASA.Properties.Resources.BotonConsultaCalendario;
             this.btnSiguiente.ImageSize = new System.Drawing.Size(52, 52);
             this.btnSiguiente.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.btnSiguiente.Location = new System.Drawing.Point(422, 440);
+            this.btnSiguiente.Location = new System.Drawing.Point(401, 469);
             this.btnSiguiente.Name = "btnSiguiente";
             this.btnSiguiente.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnSiguiente.OnHoverBorderColor = System.Drawing.Color.Black;

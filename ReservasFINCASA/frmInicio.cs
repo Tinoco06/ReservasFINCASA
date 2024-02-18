@@ -145,5 +145,19 @@ namespace ReservasFINCASA
             login.Show();
             this.Hide();
         }
+
+        private void btnAgregarCabanha_Click(object sender, EventArgs e)
+        {
+            frmAgregarCabanha cabanha = new frmAgregarCabanha();
+            this.Hide();
+            cabanha.Show(); 
+        }
+
+        private void btnAgregarServicio_Click(object sender, EventArgs e)
+        {
+            frmAgregarServiciosExtras frmServicios = new frmAgregarServiciosExtras();
+            frmServicios.Show();   
+            this.Hide();
+        }
     }
 }

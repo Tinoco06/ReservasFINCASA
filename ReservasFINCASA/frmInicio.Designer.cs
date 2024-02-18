@@ -40,8 +40,8 @@ namespace ReservasFINCASA
             this.btnReservacion = new System.Windows.Forms.Button();
             this.btnCotizaciones = new System.Windows.Forms.Button();
             this.btnConsultaReserva = new System.Windows.Forms.Button();
-            this.panelFondo = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
+            this.panelFondo = new System.Windows.Forms.Panel();
             this.panelMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -122,6 +122,7 @@ namespace ReservasFINCASA
             this.btnAgregarServicio.Text = "Agregar nuevo servicio";
             this.btnAgregarServicio.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnAgregarServicio.UseVisualStyleBackColor = true;
+            this.btnAgregarServicio.Click += new System.EventHandler(this.btnAgregarServicio_Click);
             // 
             // btnAgregarCabanha
             // 
@@ -140,6 +141,7 @@ namespace ReservasFINCASA
             this.btnAgregarCabanha.Text = "Agregar nueva cabaña";
             this.btnAgregarCabanha.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnAgregarCabanha.UseVisualStyleBackColor = true;
+            this.btnAgregarCabanha.Click += new System.EventHandler(this.btnAgregarCabanha_Click);
             // 
             // btnReservacion
             // 
@@ -198,16 +200,6 @@ namespace ReservasFINCASA
             this.btnConsultaReserva.UseVisualStyleBackColor = true;
             this.btnConsultaReserva.Click += new System.EventHandler(this.button1_Click);
             // 
-            // panelFondo
-            // 
-            this.panelFondo.BackgroundImage = global::ReservasFINCASA.Properties.Resources.Fondofincasa;
-            this.panelFondo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelFondo.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelFondo.Location = new System.Drawing.Point(0, 0);
-            this.panelFondo.Name = "panelFondo";
-            this.panelFondo.Size = new System.Drawing.Size(692, 630);
-            this.panelFondo.TabIndex = 0;
-            // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.White;
@@ -220,6 +212,16 @@ namespace ReservasFINCASA
             this.button2.TabIndex = 15;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            // 
+            // panelFondo
+            // 
+            this.panelFondo.BackgroundImage = global::ReservasFINCASA.Properties.Resources.Fondofincasa;
+            this.panelFondo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelFondo.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelFondo.Location = new System.Drawing.Point(0, 0);
+            this.panelFondo.Name = "panelFondo";
+            this.panelFondo.Size = new System.Drawing.Size(692, 630);
+            this.panelFondo.TabIndex = 0;
             // 
             // frmInicio
             // 

@@ -110,6 +110,17 @@ namespace ReservasFINCASA
 
         private void btnAnterior_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        
+
+        private void btnSiguiente_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
             //Limpiar contenedor
             daycontainer.Controls.Clear();
 
@@ -144,7 +155,7 @@ namespace ReservasFINCASA
 
         }
 
-        private void btnSiguiente_Click(object sender, EventArgs e)
+        private void btnSiguienteMes_Click(object sender, EventArgs e)
         {
             //Limpiar contenedor
             daycontainer.Controls.Clear();

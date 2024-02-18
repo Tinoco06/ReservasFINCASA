@@ -29,7 +29,6 @@ namespace ReservasFINCASA
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConsultaFechas));
             this.btnFacturar = new System.Windows.Forms.Button();
             this.daycontainer = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
@@ -40,13 +39,13 @@ namespace ReservasFINCASA
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.LBDATE = new System.Windows.Forms.Label();
-            this.btnAnterior = new Guna.UI.WinForms.GunaAdvenceButton();
-            this.btnSiguiente = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.btnSiguienteMes = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnFacturar
             // 
-            this.btnFacturar.Location = new System.Drawing.Point(880, 638);
+            this.btnFacturar.Location = new System.Drawing.Point(948, 621);
             this.btnFacturar.Margin = new System.Windows.Forms.Padding(2);
             this.btnFacturar.Name = "btnFacturar";
             this.btnFacturar.Size = new System.Drawing.Size(183, 24);
@@ -151,75 +150,40 @@ namespace ReservasFINCASA
             this.LBDATE.Text = "MES AÑO";
             this.LBDATE.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // btnAnterior
+            // btnSiguienteMes
             // 
-            this.btnAnterior.AnimationHoverSpeed = 0.07F;
-            this.btnAnterior.AnimationSpeed = 0.03F;
-            this.btnAnterior.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.btnAnterior.BorderColor = System.Drawing.Color.Black;
-            this.btnAnterior.CheckedBaseColor = System.Drawing.Color.Gray;
-            this.btnAnterior.CheckedBorderColor = System.Drawing.Color.Black;
-            this.btnAnterior.CheckedForeColor = System.Drawing.Color.White;
-            this.btnAnterior.CheckedImage = ((System.Drawing.Image)(resources.GetObject("btnAnterior.CheckedImage")));
-            this.btnAnterior.CheckedLineColor = System.Drawing.Color.DimGray;
-            this.btnAnterior.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnAnterior.FocusedColor = System.Drawing.Color.Empty;
-            this.btnAnterior.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAnterior.ForeColor = System.Drawing.Color.White;
-            this.btnAnterior.Image = global::ReservasFINCASA.Properties.Resources.FlechaAtrasCalendario;
-            this.btnAnterior.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnAnterior.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.btnAnterior.Location = new System.Drawing.Point(849, 592);
-            this.btnAnterior.Name = "btnAnterior";
-            this.btnAnterior.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btnAnterior.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnAnterior.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnAnterior.OnHoverImage = null;
-            this.btnAnterior.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.btnAnterior.OnPressedColor = System.Drawing.Color.Black;
-            this.btnAnterior.Size = new System.Drawing.Size(111, 41);
-            this.btnAnterior.TabIndex = 9;
-            this.btnAnterior.Text = "Anterior";
-            this.btnAnterior.Click += new System.EventHandler(this.btnAnterior_Click);
+            this.btnSiguienteMes.BackColor = System.Drawing.Color.Transparent;
+            this.btnSiguienteMes.FlatAppearance.BorderSize = 0;
+            this.btnSiguienteMes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSiguienteMes.Image = global::ReservasFINCASA.Properties.Resources.FlechaAdelanteCalendario;
+            this.btnSiguienteMes.Location = new System.Drawing.Point(622, 592);
+            this.btnSiguienteMes.Name = "btnSiguienteMes";
+            this.btnSiguienteMes.Size = new System.Drawing.Size(70, 53);
+            this.btnSiguienteMes.TabIndex = 18;
+            this.btnSiguienteMes.UseVisualStyleBackColor = false;
+            this.btnSiguienteMes.Click += new System.EventHandler(this.btnSiguienteMes_Click);
             // 
-            // btnSiguiente
+            // button1
             // 
-            this.btnSiguiente.AnimationHoverSpeed = 0.07F;
-            this.btnSiguiente.AnimationSpeed = 0.03F;
-            this.btnSiguiente.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.btnSiguiente.BorderColor = System.Drawing.Color.Black;
-            this.btnSiguiente.CheckedBaseColor = System.Drawing.Color.Gray;
-            this.btnSiguiente.CheckedBorderColor = System.Drawing.Color.Black;
-            this.btnSiguiente.CheckedForeColor = System.Drawing.Color.White;
-            this.btnSiguiente.CheckedImage = ((System.Drawing.Image)(resources.GetObject("btnSiguiente.CheckedImage")));
-            this.btnSiguiente.CheckedLineColor = System.Drawing.Color.DimGray;
-            this.btnSiguiente.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnSiguiente.FocusedColor = System.Drawing.Color.Empty;
-            this.btnSiguiente.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSiguiente.ForeColor = System.Drawing.Color.White;
-            this.btnSiguiente.Image = global::ReservasFINCASA.Properties.Resources.FlechaAdelanteCalendario;
-            this.btnSiguiente.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.btnSiguiente.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnSiguiente.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.btnSiguiente.Location = new System.Drawing.Point(966, 592);
-            this.btnSiguiente.Name = "btnSiguiente";
-            this.btnSiguiente.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btnSiguiente.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnSiguiente.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnSiguiente.OnHoverImage = null;
-            this.btnSiguiente.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.btnSiguiente.OnPressedColor = System.Drawing.Color.Black;
-            this.btnSiguiente.Size = new System.Drawing.Size(111, 41);
-            this.btnSiguiente.TabIndex = 8;
-            this.btnSiguiente.Text = "Siguiente";
-            this.btnSiguiente.Click += new System.EventHandler(this.btnSiguiente_Click);
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = global::ReservasFINCASA.Properties.Resources.FlechaAtrasCalendario;
+            this.button1.Location = new System.Drawing.Point(524, 592);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(69, 53);
+            this.button1.TabIndex = 19;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // frmConsultaFechas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Bisque;
+            this.BackColor = System.Drawing.Color.Linen;
             this.ClientSize = new System.Drawing.Size(1142, 669);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnSiguienteMes);
             this.Controls.Add(this.LBDATE);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -228,8 +192,6 @@ namespace ReservasFINCASA
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnAnterior);
-            this.Controls.Add(this.btnSiguiente);
             this.Controls.Add(this.daycontainer);
             this.Controls.Add(this.btnFacturar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -246,8 +208,6 @@ namespace ReservasFINCASA
         #endregion
         private System.Windows.Forms.Button btnFacturar;
         private System.Windows.Forms.FlowLayoutPanel daycontainer;
-        private Guna.UI.WinForms.GunaAdvenceButton btnSiguiente;
-        private Guna.UI.WinForms.GunaAdvenceButton btnAnterior;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -256,5 +216,7 @@ namespace ReservasFINCASA
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label LBDATE;
+        private System.Windows.Forms.Button btnSiguienteMes;
+        private System.Windows.Forms.Button button1;
     }
 }
