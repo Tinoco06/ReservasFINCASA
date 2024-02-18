@@ -34,6 +34,26 @@ namespace ReservasFINCASA
 
         private void gunaAdvenceButton1_Click(object sender, EventArgs e)
         {
+           
+        }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnIngresar_Click_1(object sender, EventArgs e)
+        {
             try
             {
                 frmInicio inicio = new frmInicio();
@@ -45,21 +65,6 @@ namespace ReservasFINCASA
             {
                 Console.WriteLine("Error al mostrar el formulario frmCliente: " + ex.Message);
             }
-        }
-
-        private void frmLogin_Load(object sender, EventArgs e)
-        {
-            gunaAnimateWindow1.Start();
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

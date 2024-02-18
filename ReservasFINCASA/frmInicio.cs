@@ -84,17 +84,12 @@ namespace ReservasFINCASA
 
         private void btnReservacion_Click(object sender, EventArgs e)
         {
-            frmCliente cliente = new frmCliente();
-            cliente.Show();
-
-            this.Hide();
+            
         }
 
         private void btnConsultaReserva_Click(object sender, EventArgs e)
         {
-            frmConsultarReservaciones reserva = new frmConsultarReservaciones();
-            reserva.Show();
-            this.Hide();
+            
         }
 
         private void btnFechas_Click(object sender, EventArgs e)
@@ -106,9 +101,7 @@ namespace ReservasFINCASA
 
         private void btnCotizacion_Click(object sender, EventArgs e)
         {
-            frmCotizacion cotizar = new frmCotizacion();
-            cotizar.Show();
-            this.Hide();
+            
         }
 
         private void FechayHora_Tick(object sender, EventArgs e)
@@ -122,6 +115,35 @@ namespace ReservasFINCASA
             frmLogin login = new frmLogin();
             this.Hide();
             login.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmConsultarReservaciones reserva = new frmConsultarReservaciones();
+            reserva.Show();
+            this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            frmCotizacion cotizar = new frmCotizacion();
+            cotizar.Show();
+            this.Hide();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            frmCliente cliente = new frmCliente();
+            cliente.Show();
+
+            this.Hide();
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            frmLogin login = new frmLogin();
+            login.Show();
+            this.Hide();
         }
     }
 }

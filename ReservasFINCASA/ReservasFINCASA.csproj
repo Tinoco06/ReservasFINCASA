@@ -51,6 +51,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmCabanhasyServicios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCabanhasyServicios.Designer.cs">
+      <DependentUpon>frmCabanhasyServicios.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCalendario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -287,6 +293,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\FlechaAdelanteCalendario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\agregarCabanha.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ServicioExtra.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DisponibleFecha.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconoClientesNuevo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RegistroClientes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CabanhaExtras.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

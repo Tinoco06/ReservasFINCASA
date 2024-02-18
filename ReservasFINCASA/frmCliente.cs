@@ -52,8 +52,18 @@ namespace ReservasFINCASA
 
         private void gunaAdvenceTileButton1_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void panelCliente_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnReservacion_Click(object sender, EventArgs e)
+        {
             frmInicio inicio = new frmInicio();
-            inicio.Show();  
+            inicio.Show();
             this.Hide();
         }
     }
