@@ -155,6 +155,13 @@ namespace ReservasFINCASA
 
         }
 
+        private void btnVolverFormCliente_Click(object sender, EventArgs e)
+        {
+            frmInicio inicio = new frmInicio();
+            inicio.Show();
+            this.Hide();
+        }
+
         private void btnSiguienteMes_Click(object sender, EventArgs e)
         {
             //Limpiar contenedor

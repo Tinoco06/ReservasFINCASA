@@ -58,6 +58,12 @@
     <Compile Include="EventForm.Designer.cs">
       <DependentUpon>EventForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="fmrRecuperarPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmrRecuperarPassword.Designer.cs">
+      <DependentUpon>fmrRecuperarPassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAgregarCabanha.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +105,12 @@
     </Compile>
     <Compile Include="frmCotizacion.Designer.cs">
       <DependentUpon>frmCotizacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDetallesFacturacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDetallesFacturacion.Designer.cs">
+      <DependentUpon>frmDetallesFacturacion.cs</DependentUpon>
     </Compile>
     <Compile Include="frmFactura.cs">
       <SubType>Form</SubType>
@@ -148,6 +160,9 @@
     <EmbeddedResource Include="EventForm.resx">
       <DependentUpon>EventForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="fmrRecuperarPassword.resx">
+      <DependentUpon>fmrRecuperarPassword.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAgregarCabanha.resx">
       <DependentUpon>frmAgregarCabanha.cs</DependentUpon>
     </EmbeddedResource>
@@ -165,6 +180,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmCotizacion.resx">
       <DependentUpon>frmCotizacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDetallesFacturacion.resx">
+      <DependentUpon>frmDetallesFacturacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmFactura.resx">
       <DependentUpon>frmFactura.cs</DependentUpon>
@@ -341,6 +359,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\CabanhaExtras.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnEliminar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnModificar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnAgregar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IrFacturacion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BackCliente.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FondoDetalles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ImprimirFactura.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -31,16 +31,16 @@ namespace ReservasFINCASA
         {
             this.components = new System.ComponentModel.Container();
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.LabelFecha = new System.Windows.Forms.Label();
-            this.LabelHora = new System.Windows.Forms.Label();
-            this.FechayHora = new System.Windows.Forms.Timer(this.components);
             this.button1 = new System.Windows.Forms.Button();
             this.btnAgregarServicio = new System.Windows.Forms.Button();
             this.btnAgregarCabanha = new System.Windows.Forms.Button();
             this.btnReservacion = new System.Windows.Forms.Button();
             this.btnCotizaciones = new System.Windows.Forms.Button();
             this.btnConsultaReserva = new System.Windows.Forms.Button();
+            this.LabelFecha = new System.Windows.Forms.Label();
+            this.LabelHora = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
+            this.FechayHora = new System.Windows.Forms.Timer(this.components);
             this.panelFondo = new System.Windows.Forms.Panel();
             this.panelMenu.SuspendLayout();
             this.SuspendLayout();
@@ -62,31 +62,6 @@ namespace ReservasFINCASA
             this.panelMenu.Size = new System.Drawing.Size(428, 630);
             this.panelMenu.TabIndex = 1;
             // 
-            // LabelFecha
-            // 
-            this.LabelFecha.AutoSize = true;
-            this.LabelFecha.Font = new System.Drawing.Font("Gadugi", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelFecha.Location = new System.Drawing.Point(72, 88);
-            this.LabelFecha.Name = "LabelFecha";
-            this.LabelFecha.Size = new System.Drawing.Size(71, 25);
-            this.LabelFecha.TabIndex = 6;
-            this.LabelFecha.Text = "label1";
-            // 
-            // LabelHora
-            // 
-            this.LabelHora.AutoSize = true;
-            this.LabelHora.Font = new System.Drawing.Font("Gadugi", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelHora.Location = new System.Drawing.Point(165, 31);
-            this.LabelHora.Name = "LabelHora";
-            this.LabelHora.Size = new System.Drawing.Size(93, 32);
-            this.LabelHora.TabIndex = 5;
-            this.LabelHora.Text = "label1";
-            // 
-            // FechayHora
-            // 
-            this.FechayHora.Enabled = true;
-            this.FechayHora.Tick += new System.EventHandler(this.FechayHora_Tick);
-            // 
             // button1
             // 
             this.button1.FlatAppearance.BorderSize = 0;
@@ -104,6 +79,7 @@ namespace ReservasFINCASA
             this.button1.Text = "Consultar fechas";
             this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // btnAgregarServicio
             // 
@@ -200,6 +176,26 @@ namespace ReservasFINCASA
             this.btnConsultaReserva.UseVisualStyleBackColor = true;
             this.btnConsultaReserva.Click += new System.EventHandler(this.button1_Click);
             // 
+            // LabelFecha
+            // 
+            this.LabelFecha.AutoSize = true;
+            this.LabelFecha.Font = new System.Drawing.Font("Gadugi", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelFecha.Location = new System.Drawing.Point(72, 88);
+            this.LabelFecha.Name = "LabelFecha";
+            this.LabelFecha.Size = new System.Drawing.Size(71, 25);
+            this.LabelFecha.TabIndex = 6;
+            this.LabelFecha.Text = "label1";
+            // 
+            // LabelHora
+            // 
+            this.LabelHora.AutoSize = true;
+            this.LabelHora.Font = new System.Drawing.Font("Gadugi", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelHora.Location = new System.Drawing.Point(165, 31);
+            this.LabelHora.Name = "LabelHora";
+            this.LabelHora.Size = new System.Drawing.Size(93, 32);
+            this.LabelHora.TabIndex = 5;
+            this.LabelHora.Text = "label1";
+            // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.White;
@@ -212,6 +208,11 @@ namespace ReservasFINCASA
             this.button2.TabIndex = 15;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            // 
+            // FechayHora
+            // 
+            this.FechayHora.Enabled = true;
+            this.FechayHora.Tick += new System.EventHandler(this.FechayHora_Tick);
             // 
             // panelFondo
             // 

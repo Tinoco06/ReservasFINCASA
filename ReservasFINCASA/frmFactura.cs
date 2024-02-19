@@ -19,6 +19,11 @@ namespace ReservasFINCASA
 
         private void btnFacturar_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void btnFacturar_Click_1(object sender, EventArgs e)
+        {
             frmInicio inicio = new frmInicio();
             inicio.Show();
             this.Hide();

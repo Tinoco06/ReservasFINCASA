@@ -66,5 +66,12 @@ namespace ReservasFINCASA
             inicio.Show();
             this.Hide();
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            frmDetallesFacturacion detalles = new frmDetallesFacturacion();
+            detalles.Show();
+            this.Hide();
+        }
     }
 }

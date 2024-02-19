@@ -44,11 +44,11 @@
             this.txtCapacidadCabanha = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.btnVolverInicio = new System.Windows.Forms.Button();
             this.dgvCabanhas = new System.Windows.Forms.DataGridView();
-            this.btnAgregar = new System.Windows.Forms.Button();
-            this.btnModificar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.btnAgregar = new System.Windows.Forms.Button();
+            this.btnVolverInicio = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCabanhas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -88,7 +88,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(259, 24);
+            this.label12.Location = new System.Drawing.Point(241, 32);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(317, 21);
             this.label12.TabIndex = 26;
@@ -211,6 +211,77 @@
             this.label9.TabIndex = 36;
             this.label9.Text = "Capacidad:";
             // 
+            // dgvCabanhas
+            // 
+            this.dgvCabanhas.AllowUserToAddRows = false;
+            this.dgvCabanhas.AllowUserToDeleteRows = false;
+            this.dgvCabanhas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvCabanhas.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCabanhas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvCabanhas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCabanhas.Location = new System.Drawing.Point(92, 360);
+            this.dgvCabanhas.Name = "dgvCabanhas";
+            this.dgvCabanhas.ReadOnly = true;
+            this.dgvCabanhas.Size = new System.Drawing.Size(588, 184);
+            this.dgvCabanhas.TabIndex = 39;
+            this.dgvCabanhas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCabanhas_CellClick);
+            this.dgvCabanhas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCabanhas_CellContentClick);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.FlatAppearance.BorderSize = 0;
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.Image = global::ReservasFINCASA.Properties.Resources.btnEliminar;
+            this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnEliminar.Location = new System.Drawing.Point(580, 550);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(100, 91);
+            this.btnEliminar.TabIndex = 42;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.FlatAppearance.BorderSize = 0;
+            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificar.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificar.Image = global::ReservasFINCASA.Properties.Resources.btnModificar;
+            this.btnModificar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnModificar.Location = new System.Drawing.Point(348, 550);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(100, 91);
+            this.btnModificar.TabIndex = 41;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.FlatAppearance.BorderSize = 0;
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregar.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.Image = global::ReservasFINCASA.Properties.Resources.btnAgregar;
+            this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnAgregar.Location = new System.Drawing.Point(92, 552);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(100, 91);
+            this.btnAgregar.TabIndex = 40;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            // 
             // btnVolverInicio
             // 
             this.btnVolverInicio.BackColor = System.Drawing.Color.White;
@@ -221,66 +292,12 @@
             this.btnVolverInicio.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnVolverInicio.Location = new System.Drawing.Point(1, 655);
             this.btnVolverInicio.Name = "btnVolverInicio";
-            this.btnVolverInicio.Size = new System.Drawing.Size(94, 83);
+            this.btnVolverInicio.Size = new System.Drawing.Size(87, 83);
             this.btnVolverInicio.TabIndex = 38;
             this.btnVolverInicio.Text = "Regresar";
             this.btnVolverInicio.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnVolverInicio.UseVisualStyleBackColor = false;
             this.btnVolverInicio.Click += new System.EventHandler(this.btnVolverInicio_Click);
-            // 
-            // dgvCabanhas
-            // 
-            this.dgvCabanhas.AllowUserToAddRows = false;
-            this.dgvCabanhas.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCabanhas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvCabanhas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCabanhas.Location = new System.Drawing.Point(92, 366);
-            this.dgvCabanhas.Name = "dgvCabanhas";
-            this.dgvCabanhas.ReadOnly = true;
-            this.dgvCabanhas.Size = new System.Drawing.Size(588, 184);
-            this.dgvCabanhas.TabIndex = 39;
-            this.dgvCabanhas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCabanhas_CellClick);
-            this.dgvCabanhas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCabanhas_CellContentClick);
-            // 
-            // btnAgregar
-            // 
-            this.btnAgregar.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.Location = new System.Drawing.Point(92, 594);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(118, 35);
-            this.btnAgregar.TabIndex = 40;
-            this.btnAgregar.Text = "Agregar";
-            this.btnAgregar.UseVisualStyleBackColor = true;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
-            // 
-            // btnModificar
-            // 
-            this.btnModificar.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificar.Location = new System.Drawing.Point(333, 594);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(118, 35);
-            this.btnModificar.TabIndex = 41;
-            this.btnModificar.Text = "Modificar";
-            this.btnModificar.UseVisualStyleBackColor = true;
-            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.Location = new System.Drawing.Point(562, 594);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(118, 35);
-            this.btnEliminar.TabIndex = 42;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = true;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // frmAgregarCabanha
             // 

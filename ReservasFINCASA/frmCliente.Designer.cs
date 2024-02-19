@@ -29,7 +29,6 @@ namespace ReservasFINCASA
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCliente));
             this.panelCliente = new System.Windows.Forms.Panel();
             this.txtEmpresaCliente = new System.Windows.Forms.TextBox();
             this.txtProcedenciaCliente = new System.Windows.Forms.TextBox();
@@ -55,7 +54,6 @@ namespace ReservasFINCASA
             this.panelFondo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.btnSiguiente = new Guna.UI.WinForms.GunaAdvenceTileButton();
             this.btnVolverReserva = new System.Windows.Forms.Button();
             this.panelCliente.SuspendLayout();
             this.panelFondo.SuspendLayout();
@@ -65,7 +63,6 @@ namespace ReservasFINCASA
             // panelCliente
             // 
             this.panelCliente.Controls.Add(this.button1);
-            this.panelCliente.Controls.Add(this.btnSiguiente);
             this.panelCliente.Controls.Add(this.btnVolverReserva);
             this.panelCliente.Controls.Add(this.txtEmpresaCliente);
             this.panelCliente.Controls.Add(this.txtProcedenciaCliente);
@@ -345,6 +342,8 @@ namespace ReservasFINCASA
             // 
             this.button1.BackColor = System.Drawing.Color.White;
             this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Image = global::ReservasFINCASA.Properties.Resources.CabanhaExtras;
@@ -356,44 +355,14 @@ namespace ReservasFINCASA
             this.button1.Text = "Cabañas y extras";
             this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button1.UseVisualStyleBackColor = false;
-            // 
-            // btnSiguiente
-            // 
-            this.btnSiguiente.AnimationHoverSpeed = 0.07F;
-            this.btnSiguiente.AnimationSpeed = 0.03F;
-            this.btnSiguiente.BackColor = System.Drawing.Color.Transparent;
-            this.btnSiguiente.BaseColor = System.Drawing.Color.Transparent;
-            this.btnSiguiente.BorderColor = System.Drawing.Color.Black;
-            this.btnSiguiente.CheckedBaseColor = System.Drawing.Color.Gray;
-            this.btnSiguiente.CheckedBorderColor = System.Drawing.Color.Black;
-            this.btnSiguiente.CheckedForeColor = System.Drawing.Color.White;
-            this.btnSiguiente.CheckedImage = ((System.Drawing.Image)(resources.GetObject("btnSiguiente.CheckedImage")));
-            this.btnSiguiente.CheckedLineColor = System.Drawing.Color.DimGray;
-            this.btnSiguiente.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnSiguiente.FocusedColor = System.Drawing.Color.Empty;
-            this.btnSiguiente.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSiguiente.ForeColor = System.Drawing.Color.Black;
-            this.btnSiguiente.Image = global::ReservasFINCASA.Properties.Resources.BotonConsultaCalendario;
-            this.btnSiguiente.ImageSize = new System.Drawing.Size(52, 52);
-            this.btnSiguiente.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.btnSiguiente.Location = new System.Drawing.Point(401, 469);
-            this.btnSiguiente.Name = "btnSiguiente";
-            this.btnSiguiente.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btnSiguiente.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnSiguiente.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnSiguiente.OnHoverImage = null;
-            this.btnSiguiente.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.btnSiguiente.OnPressedColor = System.Drawing.Color.Black;
-            this.btnSiguiente.Radius = 15;
-            this.btnSiguiente.Size = new System.Drawing.Size(96, 112);
-            this.btnSiguiente.TabIndex = 1;
-            this.btnSiguiente.Text = "Selección de fechas";
-            this.btnSiguiente.Click += new System.EventHandler(this.btnSiguiente_Click);
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // btnVolverReserva
             // 
             this.btnVolverReserva.BackColor = System.Drawing.Color.White;
             this.btnVolverReserva.FlatAppearance.BorderSize = 0;
+            this.btnVolverReserva.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnVolverReserva.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnVolverReserva.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVolverReserva.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVolverReserva.Image = global::ReservasFINCASA.Properties.Resources.FlechaAtras;
@@ -445,7 +414,6 @@ namespace ReservasFINCASA
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
-        private Guna.UI.WinForms.GunaAdvenceTileButton btnSiguiente;
         private System.Windows.Forms.TextBox txtDNICliente;
         private System.Windows.Forms.TextBox txtEmpresaCliente;
         private System.Windows.Forms.TextBox txtProcedenciaCliente;

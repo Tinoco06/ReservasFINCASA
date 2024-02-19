@@ -10,27 +10,24 @@ using System.Windows.Forms;
 
 namespace ReservasFINCASA
 {
-    public partial class frmConsultarReservaciones : Form
+    public partial class frmDetallesFacturacion : Form
     {
-        public frmConsultarReservaciones()
+        public frmDetallesFacturacion()
         {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void btnVolverCliente_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void btnInicio_Click(object sender, EventArgs e)
-        {
-           
+            frmCliente cliente = new frmCliente();
+            cliente.Show();
+            this.Hide();
         }
 
         private void btnFacturar_Click(object sender, EventArgs e)
         {
-            frmInicio inicio = new frmInicio();
-            inicio.Show();
+            frmFactura factura = new frmFactura();
+            factura.Show();
             this.Hide();
         }
     }

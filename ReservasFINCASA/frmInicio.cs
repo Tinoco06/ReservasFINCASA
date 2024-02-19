@@ -159,5 +159,12 @@ namespace ReservasFINCASA
             frmServicios.Show();   
             this.Hide();
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            frmConsultaFechas fechas = new frmConsultaFechas();
+            fechas.Show();
+            this.Hide();    
+        }
     }
 }

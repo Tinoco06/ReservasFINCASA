@@ -29,7 +29,6 @@ namespace ReservasFINCASA
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnFacturar = new System.Windows.Forms.Button();
             this.daycontainer = new System.Windows.Forms.FlowLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -39,24 +38,14 @@ namespace ReservasFINCASA
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.LBDATE = new System.Windows.Forms.Label();
-            this.btnSiguienteMes = new System.Windows.Forms.Button();
+            this.btnVolverFormCliente = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.btnSiguienteMes = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // btnFacturar
-            // 
-            this.btnFacturar.Location = new System.Drawing.Point(948, 621);
-            this.btnFacturar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnFacturar.Name = "btnFacturar";
-            this.btnFacturar.Size = new System.Drawing.Size(183, 24);
-            this.btnFacturar.TabIndex = 4;
-            this.btnFacturar.Text = "Proceder a la facturación.";
-            this.btnFacturar.UseVisualStyleBackColor = true;
-            this.btnFacturar.Click += new System.EventHandler(this.button1_Click);
             // 
             // daycontainer
             // 
-            this.daycontainer.Location = new System.Drawing.Point(46, 81);
+            this.daycontainer.Location = new System.Drawing.Point(46, 70);
             this.daycontainer.Name = "daycontainer";
             this.daycontainer.Size = new System.Drawing.Size(1031, 508);
             this.daycontainer.TabIndex = 5;
@@ -66,7 +55,7 @@ namespace ReservasFINCASA
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(76, 59);
+            this.label1.Location = new System.Drawing.Point(76, 48);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(81, 19);
             this.label1.TabIndex = 10;
@@ -77,7 +66,7 @@ namespace ReservasFINCASA
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(827, 59);
+            this.label2.Location = new System.Drawing.Point(827, 48);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(66, 19);
             this.label2.TabIndex = 11;
@@ -88,7 +77,7 @@ namespace ReservasFINCASA
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(691, 59);
+            this.label3.Location = new System.Drawing.Point(691, 48);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 19);
             this.label3.TabIndex = 12;
@@ -99,7 +88,7 @@ namespace ReservasFINCASA
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(534, 59);
+            this.label4.Location = new System.Drawing.Point(534, 48);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(83, 19);
             this.label4.TabIndex = 13;
@@ -110,7 +99,7 @@ namespace ReservasFINCASA
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(375, 59);
+            this.label5.Location = new System.Drawing.Point(375, 48);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(61, 19);
             this.label5.TabIndex = 14;
@@ -121,7 +110,7 @@ namespace ReservasFINCASA
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(227, 59);
+            this.label6.Location = new System.Drawing.Point(227, 48);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(53, 19);
             this.label6.TabIndex = 15;
@@ -132,7 +121,7 @@ namespace ReservasFINCASA
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(988, 59);
+            this.label7.Location = new System.Drawing.Point(988, 48);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(66, 19);
             this.label7.TabIndex = 16;
@@ -143,30 +132,39 @@ namespace ReservasFINCASA
             // 
             this.LBDATE.AutoSize = true;
             this.LBDATE.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBDATE.Location = new System.Drawing.Point(534, 20);
+            this.LBDATE.Location = new System.Drawing.Point(535, 9);
             this.LBDATE.Name = "LBDATE";
             this.LBDATE.Size = new System.Drawing.Size(82, 19);
             this.LBDATE.TabIndex = 17;
             this.LBDATE.Text = "MES AÑO";
             this.LBDATE.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // btnSiguienteMes
+            // btnVolverFormCliente
             // 
-            this.btnSiguienteMes.BackColor = System.Drawing.Color.Transparent;
-            this.btnSiguienteMes.FlatAppearance.BorderSize = 0;
-            this.btnSiguienteMes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSiguienteMes.Image = global::ReservasFINCASA.Properties.Resources.FlechaAdelanteCalendario;
-            this.btnSiguienteMes.Location = new System.Drawing.Point(622, 592);
-            this.btnSiguienteMes.Name = "btnSiguienteMes";
-            this.btnSiguienteMes.Size = new System.Drawing.Size(70, 53);
-            this.btnSiguienteMes.TabIndex = 18;
-            this.btnSiguienteMes.UseVisualStyleBackColor = false;
-            this.btnSiguienteMes.Click += new System.EventHandler(this.btnSiguienteMes_Click);
+            this.btnVolverFormCliente.BackColor = System.Drawing.Color.Transparent;
+            this.btnVolverFormCliente.FlatAppearance.BorderSize = 0;
+            this.btnVolverFormCliente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnVolverFormCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVolverFormCliente.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVolverFormCliente.Image = global::ReservasFINCASA.Properties.Resources.FlechaAtras;
+            this.btnVolverFormCliente.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnVolverFormCliente.Location = new System.Drawing.Point(0, 587);
+            this.btnVolverFormCliente.Name = "btnVolverFormCliente";
+            this.btnVolverFormCliente.Size = new System.Drawing.Size(87, 83);
+            this.btnVolverFormCliente.TabIndex = 40;
+            this.btnVolverFormCliente.Text = "Regresar";
+            this.btnVolverFormCliente.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnVolverFormCliente.UseVisualStyleBackColor = false;
+            this.btnVolverFormCliente.Click += new System.EventHandler(this.btnVolverFormCliente_Click);
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Image = global::ReservasFINCASA.Properties.Resources.FlechaAtrasCalendario;
             this.button1.Location = new System.Drawing.Point(524, 592);
@@ -176,12 +174,30 @@ namespace ReservasFINCASA
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
+            // btnSiguienteMes
+            // 
+            this.btnSiguienteMes.BackColor = System.Drawing.Color.Transparent;
+            this.btnSiguienteMes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSiguienteMes.FlatAppearance.BorderSize = 0;
+            this.btnSiguienteMes.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.btnSiguienteMes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnSiguienteMes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnSiguienteMes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSiguienteMes.Image = global::ReservasFINCASA.Properties.Resources.FlechaAdelanteCalendario;
+            this.btnSiguienteMes.Location = new System.Drawing.Point(622, 592);
+            this.btnSiguienteMes.Name = "btnSiguienteMes";
+            this.btnSiguienteMes.Size = new System.Drawing.Size(70, 53);
+            this.btnSiguienteMes.TabIndex = 18;
+            this.btnSiguienteMes.UseVisualStyleBackColor = false;
+            this.btnSiguienteMes.Click += new System.EventHandler(this.btnSiguienteMes_Click);
+            // 
             // frmConsultaFechas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Linen;
             this.ClientSize = new System.Drawing.Size(1142, 669);
+            this.Controls.Add(this.btnVolverFormCliente);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnSiguienteMes);
             this.Controls.Add(this.LBDATE);
@@ -193,7 +209,6 @@ namespace ReservasFINCASA
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.daycontainer);
-            this.Controls.Add(this.btnFacturar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmConsultaFechas";
@@ -206,7 +221,6 @@ namespace ReservasFINCASA
         }
 
         #endregion
-        private System.Windows.Forms.Button btnFacturar;
         private System.Windows.Forms.FlowLayoutPanel daycontainer;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -218,5 +232,6 @@ namespace ReservasFINCASA
         private System.Windows.Forms.Label LBDATE;
         private System.Windows.Forms.Button btnSiguienteMes;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnVolverFormCliente;
     }
 }

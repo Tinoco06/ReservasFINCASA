@@ -30,36 +30,48 @@ namespace ReservasFINCASA
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.btnInicio = new System.Windows.Forms.Button();
+            this.btnFacturar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(420, 202);
+            this.label1.Font = new System.Drawing.Font("Gadugi", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(410, 26);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(416, 38);
+            this.label1.Size = new System.Drawing.Size(339, 32);
             this.label1.TabIndex = 4;
             this.label1.Text = "Facturación de la estadía.";
             // 
-            // btnInicio
+            // btnFacturar
             // 
-            this.btnInicio.Location = new System.Drawing.Point(527, 314);
-            this.btnInicio.Name = "btnInicio";
-            this.btnInicio.Size = new System.Drawing.Size(187, 51);
-            this.btnInicio.TabIndex = 5;
-            this.btnInicio.Text = "Volver a inicio.";
-            this.btnInicio.UseVisualStyleBackColor = true;
-            this.btnInicio.Click += new System.EventHandler(this.btnFacturar_Click);
+            this.btnFacturar.BackColor = System.Drawing.Color.Transparent;
+            this.btnFacturar.FlatAppearance.BorderSize = 0;
+            this.btnFacturar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnFacturar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnFacturar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFacturar.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFacturar.Image = global::ReservasFINCASA.Properties.Resources.casa;
+            this.btnFacturar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnFacturar.Location = new System.Drawing.Point(1027, 537);
+            this.btnFacturar.Name = "btnFacturar";
+            this.btnFacturar.Size = new System.Drawing.Size(99, 93);
+            this.btnFacturar.TabIndex = 29;
+            this.btnFacturar.Text = "Inicio";
+            this.btnFacturar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnFacturar.UseVisualStyleBackColor = false;
+            this.btnFacturar.Click += new System.EventHandler(this.btnFacturar_Click_1);
             // 
             // frmFactura
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1226, 583);
-            this.Controls.Add(this.btnInicio);
+            this.ClientSize = new System.Drawing.Size(1126, 630);
+            this.Controls.Add(this.btnFacturar);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmFactura";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmFactura";
@@ -71,6 +83,6 @@ namespace ReservasFINCASA
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnInicio;
+        private System.Windows.Forms.Button btnFacturar;
     }
 }
