@@ -63,9 +63,29 @@ namespace ReservasFINCASA.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap agregar_servicioextra {
+            get {
+                object obj = ResourceManager.GetObject("agregar-servicioextra", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap agregarCabanha {
             get {
                 object obj = ResourceManager.GetObject("agregarCabanha", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap agregarReserva {
+            get {
+                object obj = ResourceManager.GetObject("agregarReserva", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -15,7 +15,7 @@ namespace ReservasFINCASA
             public ConexionSQL()
             {
                 // Cadena de conexión utilizando autenticación de SQL Server
-                cadenaConexion = "Data Source=.;Initial Catalog=BD_FINCASA;User ID=user1;Password=Semeolvida1";
+                cadenaConexion = "Data Source=DESKTOP-FTBFC5P\\MSSQLSERVER01;Initial Catalog=BD_FINCASA;User ID=user1;Password=Semeolvida2";
             }
 
             public SqlConnection AbrirConexion()

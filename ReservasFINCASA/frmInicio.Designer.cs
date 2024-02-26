@@ -31,6 +31,8 @@ namespace ReservasFINCASA
         {
             this.components = new System.ComponentModel.Container();
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.btnMinimizar = new System.Windows.Forms.Button();
+            this.btnCerrar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnAgregarServicio = new System.Windows.Forms.Button();
             this.btnAgregarCabanha = new System.Windows.Forms.Button();
@@ -47,6 +49,8 @@ namespace ReservasFINCASA
             // 
             // panelMenu
             // 
+            this.panelMenu.Controls.Add(this.btnMinimizar);
+            this.panelMenu.Controls.Add(this.btnCerrar);
             this.panelMenu.Controls.Add(this.button1);
             this.panelMenu.Controls.Add(this.btnAgregarServicio);
             this.panelMenu.Controls.Add(this.btnAgregarCabanha);
@@ -61,6 +65,40 @@ namespace ReservasFINCASA
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(428, 630);
             this.panelMenu.TabIndex = 1;
+            // 
+            // btnMinimizar
+            // 
+            this.btnMinimizar.BackColor = System.Drawing.Color.Transparent;
+            this.btnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMinimizar.FlatAppearance.BorderSize = 0;
+            this.btnMinimizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnMinimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinimizar.Font = new System.Drawing.Font("Gadugi", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMinimizar.Location = new System.Drawing.Point(328, 0);
+            this.btnMinimizar.Name = "btnMinimizar";
+            this.btnMinimizar.Size = new System.Drawing.Size(47, 43);
+            this.btnMinimizar.TabIndex = 17;
+            this.btnMinimizar.Text = "-";
+            this.btnMinimizar.UseVisualStyleBackColor = false;
+            this.btnMinimizar.Click += new System.EventHandler(this.button3_Click_1);
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.BackColor = System.Drawing.Color.Transparent;
+            this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCerrar.FlatAppearance.BorderSize = 0;
+            this.btnCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrar.Font = new System.Drawing.Font("Gadugi", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrar.Location = new System.Drawing.Point(381, 0);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(47, 43);
+            this.btnCerrar.TabIndex = 16;
+            this.btnCerrar.Text = "X";
+            this.btnCerrar.UseVisualStyleBackColor = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // button1
             // 
@@ -182,7 +220,7 @@ namespace ReservasFINCASA
             this.LabelFecha.Font = new System.Drawing.Font("Gadugi", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LabelFecha.Location = new System.Drawing.Point(72, 88);
             this.LabelFecha.Name = "LabelFecha";
-            this.LabelFecha.Size = new System.Drawing.Size(71, 25);
+            this.LabelFecha.Size = new System.Drawing.Size(93, 32);
             this.LabelFecha.TabIndex = 6;
             this.LabelFecha.Text = "label1";
             // 
@@ -192,7 +230,7 @@ namespace ReservasFINCASA
             this.LabelHora.Font = new System.Drawing.Font("Gadugi", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LabelHora.Location = new System.Drawing.Point(165, 31);
             this.LabelHora.Name = "LabelHora";
-            this.LabelHora.Size = new System.Drawing.Size(93, 32);
+            this.LabelHora.Size = new System.Drawing.Size(114, 40);
             this.LabelHora.TabIndex = 5;
             this.LabelHora.Text = "label1";
             // 
@@ -266,5 +304,7 @@ namespace ReservasFINCASA
         private System.Windows.Forms.Button btnAgregarServicio;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnMinimizar;
+        private System.Windows.Forms.Button btnCerrar;
     }
 }

@@ -166,5 +166,16 @@ namespace ReservasFINCASA
             fechas.Show();
             this.Hide();    
         }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Application.Exit();
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }

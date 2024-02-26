@@ -118,8 +118,38 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="btnAgregar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btnAgregar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ServicioExtra" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ServicioExtra.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="usuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\usuario1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="agregarReserva" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\agregarReserva.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ImprimirFactura" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ImprimirFactura.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IrFacturacion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IrFacturacion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SalirInicio" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SalirInicio.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FlechaAdelanteCalendario" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FlechaAdelanteCalendario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="agregarCabanha" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\agregarCabanha.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Fondofincasa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Fondofincasa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CabanhaExtras" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CabanhaExtras.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BotonReserva" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BotonReserva.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="BackCliente" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BackCliente.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -127,32 +157,17 @@
   <data name="RegistroClientes" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\RegistroClientes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="BotonConsultaReserva" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BotonConsultaReserva.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="BotonReserva" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BotonReserva.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cabanhaInicio" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cabanhaInicio.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="FlechaAtrasCalendario" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FlechaAtrasCalendario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="SalirInicio" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\SalirInicio.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="btnEliminar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\btnEliminar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="FondoDetalles" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FondoDetalles.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Fondofincasa" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Fondofincasa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="IconoClientesNuevo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IconoClientesNuevo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="BotonConsultaCalendario" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BotonConsultaCalendario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="cabanhaInicio" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cabanhaInicio.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="DisponibleFecha" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\DisponibleFecha.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -160,43 +175,34 @@
   <data name="FondoDeClientes" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FondoDeClientes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="CabanhaExtras" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\CabanhaExtras.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="FlechaAdelanteCalendario" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\FlechaAdelanteCalendario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="btnAgregar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnAgregar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="FlechaAtras" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FlechaAtras.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="IconoClientesNuevo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IconoClientesNuevo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="casa" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\casa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ServicioExtra" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ServicioExtra.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="BotonCotizaciones" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\BotonCotizaciones.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cerrar-con-llave" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cerrar-con-llave1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="BotonConsultaCalendario" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BotonConsultaCalendario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="btnModificar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\btnModificar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="agregarCabanha" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\agregarCabanha.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="BotonCotizaciones" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BotonCotizaciones.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="usuario" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\usuario1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="btnEliminar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\btnEliminar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="IrFacturacion" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IrFacturacion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="BotonConsultaReserva" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\BotonConsultaReserva.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ImprimirFactura" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ImprimirFactura.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="casa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\casa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cerrar-con-llave" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cerrar-con-llave1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="agregar-servicioextra" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\agregar-servicioextra.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

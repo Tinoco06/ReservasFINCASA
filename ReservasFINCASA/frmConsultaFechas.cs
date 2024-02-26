@@ -162,6 +162,16 @@ namespace ReservasFINCASA
             this.Hide();
         }
 
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Application.Exit();
+        }
+
+        private void btnMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
         private void btnSiguienteMes_Click(object sender, EventArgs e)
         {
             //Limpiar contenedor
