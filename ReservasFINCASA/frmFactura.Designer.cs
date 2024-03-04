@@ -33,6 +33,7 @@ namespace ReservasFINCASA
             this.btnFacturar = new System.Windows.Forms.Button();
             this.btnMinimizar = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.SuspendLayout();
             // 
             // label1
@@ -56,7 +57,7 @@ namespace ReservasFINCASA
             this.btnFacturar.Image = global::ReservasFINCASA.Properties.Resources.casa;
             this.btnFacturar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnFacturar.Location = new System.Drawing.Point(1369, 661);
-            this.btnFacturar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnFacturar.Margin = new System.Windows.Forms.Padding(4);
             this.btnFacturar.Name = "btnFacturar";
             this.btnFacturar.Size = new System.Drawing.Size(132, 114);
             this.btnFacturar.TabIndex = 29;
@@ -99,11 +100,20 @@ namespace ReservasFINCASA
             this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
+            // reportViewer1
+            // 
+            this.reportViewer1.Location = new System.Drawing.Point(36, 110);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(1323, 452);
+            this.reportViewer1.TabIndex = 32;
+            // 
             // frmFactura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1501, 775);
+            this.Controls.Add(this.reportViewer1);
             this.Controls.Add(this.btnMinimizar);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.btnFacturar);
@@ -113,6 +123,7 @@ namespace ReservasFINCASA
             this.Name = "frmFactura";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmFactura";
+            this.Load += new System.EventHandler(this.frmFactura_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -124,5 +135,6 @@ namespace ReservasFINCASA
         private System.Windows.Forms.Button btnFacturar;
         private System.Windows.Forms.Button btnMinimizar;
         private System.Windows.Forms.Button btnCerrar;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
     }
 }

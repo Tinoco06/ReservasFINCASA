@@ -17,23 +17,6 @@ namespace ReservasFINCASA
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnInicio_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void btnFacturar_Click(object sender, EventArgs e)
-        {
-            frmInicio inicio = new frmInicio();
-            inicio.Show();
-            this.Hide();
-        }
-
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             System.Windows.Forms.Application.Exit();
@@ -42,6 +25,13 @@ namespace ReservasFINCASA
         private void btnMinimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnVolverinicio_Click(object sender, EventArgs e)
+        {
+            frmInicio inicio = new frmInicio();
+            inicio.Show();
+            this.Hide();
         }
     }
 }

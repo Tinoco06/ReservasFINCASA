@@ -14,7 +14,7 @@ namespace ReservasFINCASA
 {
     public partial class frmAgregarServiciosExtras : Form
     {
-
+        //Instancias para conexión y clases
         private ConexionSQL conexionSQL = new ConexionSQL();
         MantenimientoServicios mante = new MantenimientoServicios();
 
@@ -23,6 +23,7 @@ namespace ReservasFINCASA
             InitializeComponent();
         }
 
+        //Botón de inicio 
         private void btnVolverInicio_Click(object sender, EventArgs e)
         {
             frmInicio frmInicio = new frmInicio();
@@ -30,6 +31,7 @@ namespace ReservasFINCASA
             frmInicio.Show();
         }
 
+        //Llenar el datagrid con los datos de la tabla servicios adicionales
         private void LlenardgvServicios()
         {
             using (SqlConnection conexion = conexionSQL.AbrirConexion())
@@ -53,26 +55,28 @@ namespace ReservasFINCASA
             }
         }
 
+        //Limpiar los controles del formulario
         public void limpiar()
         {
-
             txtIDservicio.Text = "";
             txtNombreServicio.Text = "";
             txtDescripcionServicio.Text = "";
             txtPrecioServicio.Text = "";
-
         }
 
+        //Llamar funcion cargar servicios
         private void CargarDatos()
         {
             LlenardgvServicios();
         }
 
+        //Servicios se muestran al cargar el formulario
         private void frmAgregarExtras_Load(object sender, EventArgs e)
         {
            CargarDatos();
         }
 
+        //Botón que permite agregar servicios a la BDD mediante la instancia de la clase MantenimientoServicios
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             string ID = txtIDservicio.Text, Nombre = txtNombreServicio.Text, Descripcion = txtDescripcionServicio.Text;
@@ -85,6 +89,7 @@ namespace ReservasFINCASA
 
         }
 
+        //Extrae los datos del grid a los controles del form
         private void dgvServicios_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             txtIDservicio.Text = dgvServicios.CurrentRow.Cells[0].Value.ToString();
@@ -94,6 +99,7 @@ namespace ReservasFINCASA
 
         }
 
+        //Botón que permite modificar servicios a la BDD mediante la instancia de la clase MantenimientoServicios
         private void btnModificar_Click(object sender, EventArgs e)
         {
             string ID = txtIDservicio.Text, Nombre = txtNombreServicio.Text, Descripcion = txtDescripcionServicio.Text;
@@ -105,6 +111,7 @@ namespace ReservasFINCASA
             CargarDatos();
         }
 
+        //Botón que permite eliminar servicios a la BDD mediante la instancia de la clase MantenimientoServicios
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             string ID = txtIDservicio.Text, Nombre = txtNombreServicio.Text, Descripcion = txtDescripcionServicio.Text;
@@ -114,6 +121,12 @@ namespace ReservasFINCASA
 
             limpiar();
             CargarDatos();
+        }
+
+        //Botón para limpiar los controles
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            limpiar();
         }
     }
 }

@@ -13,6 +13,7 @@ namespace ReservasFINCASA
 {
     public partial class frmAgregarCabanha : Form
     {
+        //Instancias de conexión y clases
         private ConexionSQL conexionSQL = new ConexionSQL();
         MantenimientoCabanhas mante = new MantenimientoCabanhas();
 
@@ -21,11 +22,7 @@ namespace ReservasFINCASA
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        //Boton inicio para regresar al menu
         private void btnVolverInicio_Click(object sender, EventArgs e)
         {
             frmInicio frmInicio = new frmInicio();
@@ -34,6 +31,7 @@ namespace ReservasFINCASA
             
         }
 
+        //Método que hace la consulta para llenar el datagrid
         private void LlenardgvCabanhas()
         {
             using (SqlConnection conexion = conexionSQL.AbrirConexion())
@@ -61,11 +59,14 @@ namespace ReservasFINCASA
         {
             LlenardgvCabanhas();
         }
+
+        //Mostrar los datos cuando el formulario se cargue
         private void frmAgregarCabanha_Load(object sender, EventArgs e)
         {
             CargarDatos();
         }
 
+        //Función para limpiar los controles del formulario
         public void limpiar()
         {
             txtIDcabaña.Text = "";
@@ -75,6 +76,7 @@ namespace ReservasFINCASA
             txtPrecioCabanha.Text = "";
         }
 
+        //Agregar un registro a la BDD
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             String ID = txtIDcabaña.Text, nombre = txtNombreCabanha.Text, descripcion = txtDescripcionCabanha.Text;
@@ -87,10 +89,7 @@ namespace ReservasFINCASA
             limpiar();
         }
 
-        private void dgvCabanhas_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-        }
-
+        //Llenar los controles con la información del grid
         private void dgvCabanhas_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             txtIDcabaña.Text = dgvCabanhas.CurrentRow.Cells[0].Value.ToString();
@@ -101,6 +100,7 @@ namespace ReservasFINCASA
             
         }
 
+        //Modificar registro en la BDD
         private void btnModificar_Click(object sender, EventArgs e)
         {
             String ID = txtIDcabaña.Text, nombre = txtNombreCabanha.Text, descripcion = txtDescripcionCabanha.Text;
@@ -113,6 +113,7 @@ namespace ReservasFINCASA
             limpiar();
         }
 
+        //Eliminar registro en la BDD
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             String ID = txtIDcabaña.Text, nombre = txtNombreCabanha.Text, descripcion = txtDescripcionCabanha.Text;
@@ -122,6 +123,12 @@ namespace ReservasFINCASA
             mante.AccionesCabanhas(ID, nombre, descripcion, capacidad, precio, "eliminar");
 
             CargarDatos();
+            limpiar();
+        }
+
+        //Botón limpiar
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
             limpiar();
         }
     }

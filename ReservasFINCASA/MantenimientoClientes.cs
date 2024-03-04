@@ -11,18 +11,20 @@ namespace ReservasFINCASA
 {
     internal class MantenimientoClientes
     {
-
-        public void AccionesCabanhas(int codigo, String DNI, String Nombre,
+        //Creación del método parametrizado
+        public void AccionesClientes(int codigo, String DNI, String Nombre,
            String Apellido, String Correo, String Telefono, String Procedencia, String Empresa, String Accion)
         {
-
+            //Conectar la base de datos
             ConexionSQL conexionSQL = new ConexionSQL();
             using (SqlConnection conexion = conexionSQL.AbrirConexion())
             {
                 if (conexion != null)
                 {
+                    //Try catch para manejo de excepciones
                     try
                     {
+                        //Llamar el procedimiento almacenado y agregar los valores
                         SqlCommand cmd = new SqlCommand("SP_CRUD_CLIENTES", conexion);
                         cmd.CommandType = CommandType.StoredProcedure;
                         cmd.Parameters.AddWithValue("@IDcliente", codigo);
@@ -37,6 +39,7 @@ namespace ReservasFINCASA
 
                         cmd.ExecuteNonQuery();
 
+                        //Mensaje de acuerdo a la acción realizada
                         if (Accion == "agregar")
                             MessageBox.Show("Cliente agregado", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         else if (Accion == "modificar")
@@ -55,6 +58,5 @@ namespace ReservasFINCASA
         }
 
     }
-
-        }
+}
 

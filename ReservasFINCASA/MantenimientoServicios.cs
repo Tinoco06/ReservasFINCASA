@@ -11,17 +11,20 @@ namespace ReservasFINCASA
 {
     internal class MantenimientoServicios
     {
-
+        //Creación del método parametrizado
         public void AccionesServicios(String IDservicio, String NombreServicio, String DescripcionServicio,
             float PrecioServicio, String Accion)
         {
+            //Conectar la base de datos
             ConexionSQL conexionSQL = new ConexionSQL();
             using (SqlConnection conexion = conexionSQL.AbrirConexion())
             {
                 if (conexion != null)
                 {
+                    //Try catch para manejo de excepciones
                     try
                     {
+                        //Llamar el procedimiento almacenado y agregar los valores
                         SqlCommand cmd = new SqlCommand("SP_CRUD_SERVICIOS", conexion);
                         cmd.CommandType = CommandType.StoredProcedure;
                         cmd.Parameters.AddWithValue("@IDservicio", IDservicio);
@@ -32,6 +35,7 @@ namespace ReservasFINCASA
 
                         cmd.ExecuteNonQuery();
 
+                        //Mensaje de acuerdo a la acción realizada
                         if (Accion == "agregar")
                             MessageBox.Show("Servicio agregado", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         else if (Accion == "modificar")

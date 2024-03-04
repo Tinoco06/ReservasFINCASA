@@ -38,5 +38,11 @@ namespace ReservasFINCASA
         {
             System.Windows.Forms.Application.Exit();
         }
+
+        private void frmFactura_Load(object sender, EventArgs e)
+        {
+
+            this.reportViewer1.RefreshReport();
+        }
     }
 }

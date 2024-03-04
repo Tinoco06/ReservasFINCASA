@@ -13,9 +13,11 @@ namespace ReservasFINCASA
 {
     public partial class frmCliente : Form
     {
+        //Instancias para conexión y clase MantenimientoClientes
         private ConexionSQL conexionSQL = new ConexionSQL();
         MantenimientoClientes mante = new MantenimientoClientes();
 
+        //Variable que permite extraer el codigo del cliente y hacer las modificaciones
         int codigo = 0;
 
         public frmCliente()
@@ -23,6 +25,7 @@ namespace ReservasFINCASA
             InitializeComponent();
         }
 
+        //Función para llenar el grid de cliente
         private void LlenardgvClientes()
         {
             using (SqlConnection conexion = conexionSQL.AbrirConexion())
@@ -46,118 +49,87 @@ namespace ReservasFINCASA
             }
         }
 
+        //Función para limpiar los controles del formulario
         public void limpiar()
         {
             txtDNICliente.Text = "";
             txtNombreCliente.Text = "";
             txtApellidoCliente.Text = "";
             txtEmpresaCliente.Text = "";
+            txtEmailCliente.Text = "";
             txtCelularCliente.Text = "";
             txtProcedenciaCliente.Text = "";
             txtEmpresaCliente.Text = "";
         }
 
+        //Cargar datos
         private void CargarDatos()
         {
             LlenardgvClientes();
         }
 
+        //Llenar el grid cuando se cargue el form
         private void frmCliente_Load(object sender, EventArgs e)
         {
             CargarDatos();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnSiguiente_Click(object sender, EventArgs e)
-        {
-            frmConsultaFechas calendario = new frmConsultaFechas();
-            calendario.Show();
-            this.Hide();
-
-        }
-
-        private void label13_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void gunaAdvenceTileButton1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void panelCliente_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void btnReservacion_Click(object sender, EventArgs e)
+        //Botón volver a inicio
+        private void btnRegresarInicio_Click(object sender, EventArgs e)
         {
             frmInicio inicio = new frmInicio();
             inicio.Show();
             this.Hide();
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        //Boton para hacer la reserva de cabañas y servicios, envía el nombre del cliente
+        private void btnCabanasServicios_Click(object sender, EventArgs e)
         {
-            string nombreCliente = txtNombreCliente.Text;
-            frmReserva_Servicios detalles = new frmReserva_Servicios(nombreCliente);
+            string nombreCliente = txtNombreCliente.Text, correoCliente = txtEmailCliente.Text;
+            
+            frmReserva_Servicios detalles = new frmReserva_Servicios(nombreCliente, correoCliente);
             detalles.Show();
             this.Hide();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        //Minimizar pantalla
+        private void btnMinimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
 
+        //Cerrar programa
         private void btnCerrar_Click(object sender, EventArgs e)
         {
             System.Windows.Forms.Application.Exit();
         }
 
+        //Botón para agregar clientes mediante la clase MantenimientoClientes con sus respectivos parámetros
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             String DNI = txtDNICliente.Text, nombreCliente = txtNombreCliente.Text, apellidoCliente = txtApellidoCliente.Text, 
                 correoCliente = txtEmailCliente.Text, telefonoCliente = txtCelularCliente.Text, procedenciaCliente = txtProcedenciaCliente.Text, empresaCliente = txtEmpresaCliente.Text; 
 
-            mante.AccionesCabanhas(0, DNI, nombreCliente, apellidoCliente, correoCliente, telefonoCliente, procedenciaCliente, empresaCliente, "agregar");
+            mante.AccionesClientes(0, DNI, nombreCliente, apellidoCliente, correoCliente, telefonoCliente, procedenciaCliente, empresaCliente, "agregar");
             
             limpiar();
             CargarDatos();
         }
 
+        ////Botón para moficar clientes mediante la clase MantenimientoClientes con sus respectivos parámetros
         private void btnModificar_Click(object sender, EventArgs e)
         {
             String DNI = txtDNICliente.Text, nombreCliente = txtNombreCliente.Text, apellidoCliente = txtApellidoCliente.Text,
                 correoCliente = txtEmailCliente.Text, telefonoCliente = txtCelularCliente.Text, procedenciaCliente = txtProcedenciaCliente.Text, empresaCliente = txtEmpresaCliente.Text;
 
-            mante.AccionesCabanhas(codigo, DNI, nombreCliente, apellidoCliente, correoCliente, telefonoCliente, procedenciaCliente, empresaCliente, "modificar");
+            mante.AccionesClientes(codigo, DNI, nombreCliente, apellidoCliente, correoCliente, telefonoCliente, procedenciaCliente, empresaCliente, "modificar");
 
             limpiar();
             CargarDatos();
 
         }
 
+        //Regresar los datos del grid a los controles del form
         private void dgvClientes_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             codigo = int.Parse(dgvClientes.CurrentRow.Cells[0].Value.ToString()); 
@@ -170,12 +142,13 @@ namespace ReservasFINCASA
             txtEmpresaCliente.Text = dgvClientes.CurrentRow.Cells[7].Value.ToString();
         }
 
+        //Botón para eliminar clientes mediante la clase MantenimientoClientes con sus respectivos parámetros
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             String DNI = txtDNICliente.Text, nombreCliente = txtNombreCliente.Text, apellidoCliente = txtApellidoCliente.Text,
                 correoCliente = txtEmailCliente.Text, telefonoCliente = txtCelularCliente.Text, procedenciaCliente = txtProcedenciaCliente.Text, empresaCliente = txtEmpresaCliente.Text;
 
-            mante.AccionesCabanhas(codigo, DNI, nombreCliente, apellidoCliente, correoCliente, telefonoCliente, procedenciaCliente, empresaCliente, "eliminar");
+            mante.AccionesClientes(codigo, DNI, nombreCliente, apellidoCliente, correoCliente, telefonoCliente, procedenciaCliente, empresaCliente, "eliminar");
 
             limpiar();
             CargarDatos();

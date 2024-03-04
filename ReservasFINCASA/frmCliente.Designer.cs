@@ -29,10 +29,10 @@ namespace ReservasFINCASA
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelCliente = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnVolverReserva = new System.Windows.Forms.Button();
+            this.btnCabanasServicios = new System.Windows.Forms.Button();
+            this.btnRegresarInicio = new System.Windows.Forms.Button();
             this.txtEmpresaCliente = new System.Windows.Forms.TextBox();
             this.txtProcedenciaCliente = new System.Windows.Forms.TextBox();
             this.txtEmailCliente = new System.Windows.Forms.TextBox();
@@ -55,12 +55,12 @@ namespace ReservasFINCASA
             this.label1 = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.panelFondo = new System.Windows.Forms.Panel();
-            this.btnMinimizar = new System.Windows.Forms.Button();
-            this.btnCerrar = new System.Windows.Forms.Button();
+            this.dgvClientes = new System.Windows.Forms.DataGridView();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
-            this.dgvClientes = new System.Windows.Forms.DataGridView();
+            this.btnMinimizar = new System.Windows.Forms.Button();
+            this.btnCerrar = new System.Windows.Forms.Button();
             this.panelCliente.SuspendLayout();
             this.panelFondo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
@@ -68,8 +68,8 @@ namespace ReservasFINCASA
             // 
             // panelCliente
             // 
-            this.panelCliente.Controls.Add(this.button1);
-            this.panelCliente.Controls.Add(this.btnVolverReserva);
+            this.panelCliente.Controls.Add(this.btnCabanasServicios);
+            this.panelCliente.Controls.Add(this.btnRegresarInicio);
             this.panelCliente.Controls.Add(this.txtEmpresaCliente);
             this.panelCliente.Controls.Add(this.txtProcedenciaCliente);
             this.panelCliente.Controls.Add(this.txtEmailCliente);
@@ -97,47 +97,46 @@ namespace ReservasFINCASA
             this.panelCliente.Name = "panelCliente";
             this.panelCliente.Size = new System.Drawing.Size(695, 871);
             this.panelCliente.TabIndex = 4;
-            this.panelCliente.Paint += new System.Windows.Forms.PaintEventHandler(this.panelCliente_Paint);
             // 
-            // button1
+            // btnCabanasServicios
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = global::ReservasFINCASA.Properties.Resources.CabanhaExtras;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(499, 742);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(192, 114);
-            this.button1.TabIndex = 27;
-            this.button1.Text = "Cabañas y extras";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.btnCabanasServicios.BackColor = System.Drawing.Color.White;
+            this.btnCabanasServicios.FlatAppearance.BorderSize = 0;
+            this.btnCabanasServicios.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnCabanasServicios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnCabanasServicios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCabanasServicios.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCabanasServicios.Image = global::ReservasFINCASA.Properties.Resources.CabanhaExtras;
+            this.btnCabanasServicios.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnCabanasServicios.Location = new System.Drawing.Point(499, 742);
+            this.btnCabanasServicios.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCabanasServicios.Name = "btnCabanasServicios";
+            this.btnCabanasServicios.Size = new System.Drawing.Size(192, 114);
+            this.btnCabanasServicios.TabIndex = 27;
+            this.btnCabanasServicios.Text = "Cabañas y extras";
+            this.btnCabanasServicios.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnCabanasServicios.UseVisualStyleBackColor = false;
+            this.btnCabanasServicios.Click += new System.EventHandler(this.btnCabanasServicios_Click);
             // 
-            // btnVolverReserva
+            // btnRegresarInicio
             // 
-            this.btnVolverReserva.BackColor = System.Drawing.Color.White;
-            this.btnVolverReserva.FlatAppearance.BorderSize = 0;
-            this.btnVolverReserva.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnVolverReserva.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnVolverReserva.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVolverReserva.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolverReserva.Image = global::ReservasFINCASA.Properties.Resources.FlechaAtras;
-            this.btnVolverReserva.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnVolverReserva.Location = new System.Drawing.Point(0, 742);
-            this.btnVolverReserva.Margin = new System.Windows.Forms.Padding(4);
-            this.btnVolverReserva.Name = "btnVolverReserva";
-            this.btnVolverReserva.Size = new System.Drawing.Size(132, 114);
-            this.btnVolverReserva.TabIndex = 26;
-            this.btnVolverReserva.Text = "Anterior";
-            this.btnVolverReserva.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnVolverReserva.UseVisualStyleBackColor = false;
-            this.btnVolverReserva.Click += new System.EventHandler(this.btnReservacion_Click);
+            this.btnRegresarInicio.BackColor = System.Drawing.Color.White;
+            this.btnRegresarInicio.FlatAppearance.BorderSize = 0;
+            this.btnRegresarInicio.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnRegresarInicio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnRegresarInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegresarInicio.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegresarInicio.Image = global::ReservasFINCASA.Properties.Resources.FlechaAtras;
+            this.btnRegresarInicio.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnRegresarInicio.Location = new System.Drawing.Point(0, 742);
+            this.btnRegresarInicio.Margin = new System.Windows.Forms.Padding(4);
+            this.btnRegresarInicio.Name = "btnRegresarInicio";
+            this.btnRegresarInicio.Size = new System.Drawing.Size(132, 114);
+            this.btnRegresarInicio.TabIndex = 26;
+            this.btnRegresarInicio.Text = "Regresar";
+            this.btnRegresarInicio.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnRegresarInicio.UseVisualStyleBackColor = false;
+            this.btnRegresarInicio.Click += new System.EventHandler(this.btnRegresarInicio_Click);
             // 
             // txtEmpresaCliente
             // 
@@ -302,7 +301,6 @@ namespace ReservasFINCASA
             this.label5.Size = new System.Drawing.Size(161, 20);
             this.label5.TabIndex = 17;
             this.label5.Text = "Correo electrónico:";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label6
             // 
@@ -314,7 +312,6 @@ namespace ReservasFINCASA
             this.label6.Size = new System.Drawing.Size(207, 20);
             this.label6.TabIndex = 15;
             this.label6.Text = "Empresa que representa:";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label3
             // 
@@ -401,40 +398,29 @@ namespace ReservasFINCASA
             this.panelFondo.Size = new System.Drawing.Size(841, 871);
             this.panelFondo.TabIndex = 5;
             // 
-            // btnMinimizar
+            // dgvClientes
             // 
-            this.btnMinimizar.BackColor = System.Drawing.Color.White;
-            this.btnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMinimizar.FlatAppearance.BorderSize = 0;
-            this.btnMinimizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnMinimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimizar.Font = new System.Drawing.Font("Gadugi", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMinimizar.Location = new System.Drawing.Point(758, 0);
-            this.btnMinimizar.Name = "btnMinimizar";
-            this.btnMinimizar.Size = new System.Drawing.Size(47, 43);
-            this.btnMinimizar.TabIndex = 19;
-            this.btnMinimizar.Text = "-";
-            this.btnMinimizar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnMinimizar.UseVisualStyleBackColor = false;
-            this.btnMinimizar.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // btnCerrar
-            // 
-            this.btnCerrar.BackColor = System.Drawing.Color.White;
-            this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCerrar.FlatAppearance.BorderSize = 0;
-            this.btnCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrar.Font = new System.Drawing.Font("Gadugi", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCerrar.Location = new System.Drawing.Point(804, 0);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(47, 43);
-            this.btnCerrar.TabIndex = 18;
-            this.btnCerrar.Text = "X";
-            this.btnCerrar.UseVisualStyleBackColor = false;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            this.dgvClientes.AllowUserToAddRows = false;
+            this.dgvClientes.AllowUserToDeleteRows = false;
+            this.dgvClientes.BackgroundColor = System.Drawing.Color.White;
+            this.dgvClientes.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvClientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvClientes.Location = new System.Drawing.Point(84, 499);
+            this.dgvClientes.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvClientes.Name = "dgvClientes";
+            this.dgvClientes.ReadOnly = true;
+            this.dgvClientes.RowHeadersWidth = 51;
+            this.dgvClientes.Size = new System.Drawing.Size(738, 244);
+            this.dgvClientes.TabIndex = 46;
+            this.dgvClientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClientes_CellClick);
             // 
             // btnEliminar
             // 
@@ -490,29 +476,40 @@ namespace ReservasFINCASA
             this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // dgvClientes
+            // btnMinimizar
             // 
-            this.dgvClientes.AllowUserToAddRows = false;
-            this.dgvClientes.AllowUserToDeleteRows = false;
-            this.dgvClientes.BackgroundColor = System.Drawing.Color.White;
-            this.dgvClientes.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvClientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvClientes.Location = new System.Drawing.Point(84, 499);
-            this.dgvClientes.Margin = new System.Windows.Forms.Padding(4);
-            this.dgvClientes.Name = "dgvClientes";
-            this.dgvClientes.ReadOnly = true;
-            this.dgvClientes.RowHeadersWidth = 51;
-            this.dgvClientes.Size = new System.Drawing.Size(738, 244);
-            this.dgvClientes.TabIndex = 46;
-            this.dgvClientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvClientes_CellClick);
+            this.btnMinimizar.BackColor = System.Drawing.Color.White;
+            this.btnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMinimizar.FlatAppearance.BorderSize = 0;
+            this.btnMinimizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnMinimizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinimizar.Font = new System.Drawing.Font("Gadugi", 25.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMinimizar.Location = new System.Drawing.Point(745, 0);
+            this.btnMinimizar.Name = "btnMinimizar";
+            this.btnMinimizar.Size = new System.Drawing.Size(47, 43);
+            this.btnMinimizar.TabIndex = 19;
+            this.btnMinimizar.Text = "-";
+            this.btnMinimizar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnMinimizar.UseVisualStyleBackColor = false;
+            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.BackColor = System.Drawing.Color.White;
+            this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCerrar.FlatAppearance.BorderSize = 0;
+            this.btnCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrar.Font = new System.Drawing.Font("Gadugi", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCerrar.Location = new System.Drawing.Point(793, 0);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(54, 43);
+            this.btnCerrar.TabIndex = 18;
+            this.btnCerrar.Text = "X";
+            this.btnCerrar.UseVisualStyleBackColor = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // frmCliente
             // 
@@ -560,8 +557,8 @@ namespace ReservasFINCASA
         private System.Windows.Forms.TextBox txtApellidoCliente;
         private System.Windows.Forms.TextBox txtCelularCliente;
         private System.Windows.Forms.TextBox txtNombreCliente;
-        private System.Windows.Forms.Button btnVolverReserva;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnRegresarInicio;
+        private System.Windows.Forms.Button btnCabanasServicios;
         private System.Windows.Forms.Button btnMinimizar;
         private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.Button btnEliminar;

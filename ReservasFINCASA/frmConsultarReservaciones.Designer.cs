@@ -32,9 +32,9 @@ namespace ReservasFINCASA
             this.dgvReservas = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtBusqueda = new System.Windows.Forms.TextBox();
-            this.btnFacturar = new System.Windows.Forms.Button();
             this.btnMinimizar = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
+            this.btnVolverinicio = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReservas)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -55,6 +55,7 @@ namespace ReservasFINCASA
             // 
             this.panel1.BackgroundImage = global::ReservasFINCASA.Properties.Resources.BackCliente;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.btnVolverinicio);
             this.panel1.Controls.Add(this.txtBusqueda);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -71,26 +72,6 @@ namespace ReservasFINCASA
             this.txtBusqueda.Name = "txtBusqueda";
             this.txtBusqueda.Size = new System.Drawing.Size(572, 34);
             this.txtBusqueda.TabIndex = 0;
-            // 
-            // btnFacturar
-            // 
-            this.btnFacturar.BackColor = System.Drawing.Color.Transparent;
-            this.btnFacturar.FlatAppearance.BorderSize = 0;
-            this.btnFacturar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnFacturar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnFacturar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFacturar.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFacturar.Image = global::ReservasFINCASA.Properties.Resources.casa;
-            this.btnFacturar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnFacturar.Location = new System.Drawing.Point(1393, 709);
-            this.btnFacturar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnFacturar.Name = "btnFacturar";
-            this.btnFacturar.Size = new System.Drawing.Size(132, 114);
-            this.btnFacturar.TabIndex = 30;
-            this.btnFacturar.Text = "Inicio";
-            this.btnFacturar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnFacturar.UseVisualStyleBackColor = false;
-            this.btnFacturar.Click += new System.EventHandler(this.btnFacturar_Click);
             // 
             // btnMinimizar
             // 
@@ -126,6 +107,27 @@ namespace ReservasFINCASA
             this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
+            // btnVolverinicio
+            // 
+            this.btnVolverinicio.BackColor = System.Drawing.Color.Transparent;
+            this.btnVolverinicio.FlatAppearance.BorderSize = 0;
+            this.btnVolverinicio.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnVolverinicio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnVolverinicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVolverinicio.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVolverinicio.ForeColor = System.Drawing.Color.White;
+            this.btnVolverinicio.Image = global::ReservasFINCASA.Properties.Resources.FlechaAtras;
+            this.btnVolverinicio.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnVolverinicio.Location = new System.Drawing.Point(0, 710);
+            this.btnVolverinicio.Margin = new System.Windows.Forms.Padding(4);
+            this.btnVolverinicio.Name = "btnVolverinicio";
+            this.btnVolverinicio.Size = new System.Drawing.Size(132, 113);
+            this.btnVolverinicio.TabIndex = 33;
+            this.btnVolverinicio.Text = "Regresar";
+            this.btnVolverinicio.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnVolverinicio.UseVisualStyleBackColor = false;
+            this.btnVolverinicio.Click += new System.EventHandler(this.btnVolverinicio_Click);
+            // 
             // frmConsultarReservaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -134,7 +136,6 @@ namespace ReservasFINCASA
             this.ClientSize = new System.Drawing.Size(1523, 823);
             this.Controls.Add(this.btnMinimizar);
             this.Controls.Add(this.btnCerrar);
-            this.Controls.Add(this.btnFacturar);
             this.Controls.Add(this.dgvReservas);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -153,8 +154,8 @@ namespace ReservasFINCASA
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txtBusqueda;
         private System.Windows.Forms.DataGridView dgvReservas;
-        private System.Windows.Forms.Button btnFacturar;
         private System.Windows.Forms.Button btnMinimizar;
         private System.Windows.Forms.Button btnCerrar;
+        private System.Windows.Forms.Button btnVolverinicio;
     }
 }

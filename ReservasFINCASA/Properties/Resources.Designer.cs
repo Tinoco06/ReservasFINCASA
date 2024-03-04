@@ -63,6 +63,26 @@ namespace ReservasFINCASA.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap abrirReserva {
+            get {
+                object obj = ResourceManager.GetObject("abrirReserva", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap actualizarReserva {
+            get {
+                object obj = ResourceManager.GetObject("actualizarReserva", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap agregar_servicioextra {
             get {
                 object obj = ResourceManager.GetObject("agregar-servicioextra", resourceCulture);
@@ -193,6 +213,16 @@ namespace ReservasFINCASA.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap carpeta_abierta {
+            get {
+                object obj = ResourceManager.GetObject("carpeta-abierta", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap casa {
             get {
                 object obj = ResourceManager.GetObject("casa", resourceCulture);
@@ -206,6 +236,16 @@ namespace ReservasFINCASA.Properties {
         internal static System.Drawing.Bitmap cerrar_con_llave {
             get {
                 object obj = ResourceManager.GetObject("cerrar-con-llave", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap correo_electronico {
+            get {
+                object obj = ResourceManager.GetObject("correo-electronico", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -246,6 +286,16 @@ namespace ReservasFINCASA.Properties {
         internal static System.Drawing.Bitmap FlechaAtrasCalendario {
             get {
                 object obj = ResourceManager.GetObject("FlechaAtrasCalendario", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap FondoAbrirReserva {
+            get {
+                object obj = ResourceManager.GetObject("FondoAbrirReserva", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -313,6 +363,26 @@ namespace ReservasFINCASA.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap limpiarCampos {
+            get {
+                object obj = ResourceManager.GetObject("limpiarCampos", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap NuevoFondoAbrirReserva {
+            get {
+                object obj = ResourceManager.GetObject("NuevoFondoAbrirReserva", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap RegistroClientes {
             get {
                 object obj = ResourceManager.GetObject("RegistroClientes", resourceCulture);
@@ -326,6 +396,16 @@ namespace ReservasFINCASA.Properties {
         internal static System.Drawing.Bitmap SalirInicio {
             get {
                 object obj = ResourceManager.GetObject("SalirInicio", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap salvar {
+            get {
+                object obj = ResourceManager.GetObject("salvar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
