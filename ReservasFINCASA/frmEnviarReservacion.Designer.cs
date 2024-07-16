@@ -43,17 +43,24 @@
             // 
             // btnEnviarCorreo
             // 
+            this.btnEnviarCorreo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnEnviarCorreo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnEnviarCorreo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEnviarCorreo.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEnviarCorreo.Location = new System.Drawing.Point(756, 171);
+            this.btnEnviarCorreo.Image = global::ReservasFINCASA.Properties.Resources.FlechaAdelanteCalendario;
+            this.btnEnviarCorreo.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEnviarCorreo.Location = new System.Drawing.Point(694, 169);
             this.btnEnviarCorreo.Name = "btnEnviarCorreo";
-            this.btnEnviarCorreo.Size = new System.Drawing.Size(194, 108);
+            this.btnEnviarCorreo.Size = new System.Drawing.Size(247, 108);
             this.btnEnviarCorreo.TabIndex = 17;
-            this.btnEnviarCorreo.Text = "Enviar Correo";
+            this.btnEnviarCorreo.Text = "Enviar correo";
+            this.btnEnviarCorreo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEnviarCorreo.UseVisualStyleBackColor = true;
             this.btnEnviarCorreo.Click += new System.EventHandler(this.btnEnviarCorreo_Click);
             // 
             // txtMensaje
             // 
+            this.txtMensaje.Enabled = false;
             this.txtMensaje.Font = new System.Drawing.Font("Gadugi", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMensaje.Location = new System.Drawing.Point(77, 412);
             this.txtMensaje.Multiline = true;
@@ -63,6 +70,7 @@
             // 
             // txtAsunto
             // 
+            this.txtAsunto.Enabled = false;
             this.txtAsunto.Font = new System.Drawing.Font("Gadugi", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAsunto.Location = new System.Drawing.Point(78, 286);
             this.txtAsunto.Name = "txtAsunto";
@@ -71,6 +79,7 @@
             // 
             // txtPara
             // 
+            this.txtPara.Enabled = false;
             this.txtPara.Font = new System.Drawing.Font("Gadugi", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPara.Location = new System.Drawing.Point(77, 211);
             this.txtPara.Name = "txtPara";
@@ -79,6 +88,7 @@
             // 
             // txtDe
             // 
+            this.txtDe.Enabled = false;
             this.txtDe.Font = new System.Drawing.Font("Gadugi", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDe.Location = new System.Drawing.Point(77, 135);
             this.txtDe.Name = "txtDe";

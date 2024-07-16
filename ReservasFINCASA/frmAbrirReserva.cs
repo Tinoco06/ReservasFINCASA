@@ -22,35 +22,8 @@ namespace ReservasFINCASA
         {
             InitializeComponent();
             MostrarReservas mostrar = new MostrarReservas();
-            CargarReservas();
-        }
-
-        //Llenar el datagrid view de reservas
-        private void CargarReservas()
-        {
-            try
-            {
-                // Abre la conexión a la base de datos
-                using (SqlConnection conexion = conexionSQL.AbrirConexion())
-                {
-
-                    // Crear el comando para ejecutar el procedimiento almacenado
-                    SqlCommand command = new SqlCommand("SP_MOSTRAR_RESERVAS", conexion);
-                    command.CommandType = CommandType.StoredProcedure;
-
-                    // Crear un SqlDataAdapter para ejecutar el comando y llenar un DataTable
-                    SqlDataAdapter adapter = new SqlDataAdapter(command);
-                    DataTable dataTable = new DataTable();
-                    adapter.Fill(dataTable);
-
-                    dgvDetalleReserva.DataSource = dataTable;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al cargar las reservas: " + ex.Message);
-            }
-        }
+            CargarGrids.CargarReservas(dgvDetalleReserva);
+        }        
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
@@ -64,7 +37,7 @@ namespace ReservasFINCASA
 
         private void btnVolverCliente_Click(object sender, EventArgs e)
         {
-            frmReserva_Servicios reservas = new frmReserva_Servicios("", "");
+            frmReservaServicios reservas = new frmReservaServicios("", "","", "",false);
             reservas.Show();
             this.Hide();
         }
@@ -76,6 +49,8 @@ namespace ReservasFINCASA
 
         private void txtBuscarDNI_TextChanged(object sender, EventArgs e)
         {
+            txtBuscarDNI.MaxLength = 13;
+            ClsValidar.ValidarDNI(txtBuscarDNI);
             BusquedaDNI();
         }
 
@@ -99,26 +74,21 @@ namespace ReservasFINCASA
         //Función para enviar el numero de reserva que se va cargar
         private void dgvDetalleReserva_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            //e para el evento cellclick del datagrid
-            if (e.RowIndex >= 0)
-            {
-                DataGridViewRow selectedRow = dgvDetalleReserva.Rows[e.RowIndex];
+            DataGridViewRow selectedRow = dgvDetalleReserva.Rows[e.RowIndex];
 
-                // Extraer el valor de la primera posición del arreglo seleccionado
-                string valor = selectedRow.Cells[0].Value.ToString();
-                string nombreCliente = selectedRow.Cells[2].Value.ToString();
-                string correocliente = selectedRow.Cells[3].Value.ToString();
+            //Extrae los valores del datagrid
+            string valor = selectedRow.Cells[0].Value.ToString();
+            string nombreCliente = selectedRow.Cells[2].Value.ToString();
+            string apellidoCliente = selectedRow.Cells[3].Value.ToString(); 
+            string CorreoCliente = selectedRow.Cells[4].Value.ToString();
+            string DNIcliente = selectedRow.Cells[5].Value.ToString();
 
-                frmReserva_Servicios reservas = new frmReserva_Servicios("",correocliente);
-                reservas.ActualizarValor(valor, nombreCliente);
-                reservas.Show();
-                this.Hide();    
-            }
+            frmReservaServicios reservas = new frmReservaServicios("", CorreoCliente, "", "", false);
+            reservas.ActualizarValor(valor, nombreCliente, apellidoCliente, DNIcliente);
+            reservas.Show();
+            this.Hide();
         }
 
-        private void dgvDetalleReserva_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
 
-        }
     }
 }

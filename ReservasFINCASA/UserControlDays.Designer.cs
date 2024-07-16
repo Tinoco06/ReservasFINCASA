@@ -35,21 +35,26 @@
             // 
             this.lbdays.AutoSize = true;
             this.lbdays.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbdays.Location = new System.Drawing.Point(3, 4);
+            this.lbdays.Location = new System.Drawing.Point(4, 5);
+            this.lbdays.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbdays.Name = "lbdays";
-            this.lbdays.Size = new System.Drawing.Size(27, 19);
+            this.lbdays.Size = new System.Drawing.Size(32, 24);
             this.lbdays.TabIndex = 0;
             this.lbdays.Text = "00";
             // 
             // UserControlDays
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.Controls.Add(this.lbdays);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UserControlDays";
-            this.Size = new System.Drawing.Size(141, 78);
+            this.Size = new System.Drawing.Size(188, 96);
             this.Load += new System.EventHandler(this.UserControlDays_Load);
+            this.Click += new System.EventHandler(this.UserControlDays_Click);
+            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.UserControlDays_MouseClick);
+            this.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.UserControlDays_MouseDoubleClick);
             this.ResumeLayout(false);
             this.PerformLayout();
 

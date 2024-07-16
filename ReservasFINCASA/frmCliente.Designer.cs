@@ -31,6 +31,8 @@ namespace ReservasFINCASA
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelCliente = new System.Windows.Forms.Panel();
+            this.lblInstrucciones = new System.Windows.Forms.Label();
+            this.btnCotizar = new System.Windows.Forms.Button();
             this.btnCabanasServicios = new System.Windows.Forms.Button();
             this.btnRegresarInicio = new System.Windows.Forms.Button();
             this.txtEmpresaCliente = new System.Windows.Forms.TextBox();
@@ -68,6 +70,8 @@ namespace ReservasFINCASA
             // 
             // panelCliente
             // 
+            this.panelCliente.Controls.Add(this.lblInstrucciones);
+            this.panelCliente.Controls.Add(this.btnCotizar);
             this.panelCliente.Controls.Add(this.btnCabanasServicios);
             this.panelCliente.Controls.Add(this.btnRegresarInicio);
             this.panelCliente.Controls.Add(this.txtEmpresaCliente);
@@ -98,6 +102,37 @@ namespace ReservasFINCASA
             this.panelCliente.Size = new System.Drawing.Size(695, 871);
             this.panelCliente.TabIndex = 4;
             // 
+            // lblInstrucciones
+            // 
+            this.lblInstrucciones.AutoSize = true;
+            this.lblInstrucciones.Font = new System.Drawing.Font("Gadugi", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInstrucciones.Location = new System.Drawing.Point(37, 78);
+            this.lblInstrucciones.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblInstrucciones.Name = "lblInstrucciones";
+            this.lblInstrucciones.Size = new System.Drawing.Size(13, 20);
+            this.lblInstrucciones.TabIndex = 29;
+            this.lblInstrucciones.Text = ".";
+            // 
+            // btnCotizar
+            // 
+            this.btnCotizar.BackColor = System.Drawing.Color.White;
+            this.btnCotizar.FlatAppearance.BorderSize = 0;
+            this.btnCotizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnCotizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnCotizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCotizar.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCotizar.Image = global::ReservasFINCASA.Properties.Resources.CabanhaExtras;
+            this.btnCotizar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnCotizar.Location = new System.Drawing.Point(498, 700);
+            this.btnCotizar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCotizar.Name = "btnCotizar";
+            this.btnCotizar.Size = new System.Drawing.Size(197, 114);
+            this.btnCotizar.TabIndex = 28;
+            this.btnCotizar.Text = "Cabañas y extras";
+            this.btnCotizar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnCotizar.UseVisualStyleBackColor = false;
+            this.btnCotizar.Click += new System.EventHandler(this.btnCotizar_Click);
+            // 
             // btnCabanasServicios
             // 
             this.btnCabanasServicios.BackColor = System.Drawing.Color.White;
@@ -108,10 +143,10 @@ namespace ReservasFINCASA
             this.btnCabanasServicios.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCabanasServicios.Image = global::ReservasFINCASA.Properties.Resources.CabanhaExtras;
             this.btnCabanasServicios.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnCabanasServicios.Location = new System.Drawing.Point(499, 742);
+            this.btnCabanasServicios.Location = new System.Drawing.Point(498, 742);
             this.btnCabanasServicios.Margin = new System.Windows.Forms.Padding(4);
             this.btnCabanasServicios.Name = "btnCabanasServicios";
-            this.btnCabanasServicios.Size = new System.Drawing.Size(192, 114);
+            this.btnCabanasServicios.Size = new System.Drawing.Size(193, 114);
             this.btnCabanasServicios.TabIndex = 27;
             this.btnCabanasServicios.Text = "Cabañas y extras";
             this.btnCabanasServicios.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -149,6 +184,7 @@ namespace ReservasFINCASA
             this.txtEmpresaCliente.Name = "txtEmpresaCliente";
             this.txtEmpresaCliente.Size = new System.Drawing.Size(248, 25);
             this.txtEmpresaCliente.TabIndex = 7;
+            this.txtEmpresaCliente.TextChanged += new System.EventHandler(this.txtEmpresaCliente_TextChanged);
             // 
             // txtProcedenciaCliente
             // 
@@ -161,6 +197,7 @@ namespace ReservasFINCASA
             this.txtProcedenciaCliente.Name = "txtProcedenciaCliente";
             this.txtProcedenciaCliente.Size = new System.Drawing.Size(248, 25);
             this.txtProcedenciaCliente.TabIndex = 6;
+            this.txtProcedenciaCliente.TextChanged += new System.EventHandler(this.txtProcedenciaCliente_TextChanged);
             // 
             // txtEmailCliente
             // 
@@ -173,6 +210,7 @@ namespace ReservasFINCASA
             this.txtEmailCliente.Name = "txtEmailCliente";
             this.txtEmailCliente.Size = new System.Drawing.Size(248, 25);
             this.txtEmailCliente.TabIndex = 4;
+            this.txtEmailCliente.TextChanged += new System.EventHandler(this.txtEmailCliente_TextChanged);
             // 
             // txtApellidoCliente
             // 
@@ -185,6 +223,7 @@ namespace ReservasFINCASA
             this.txtApellidoCliente.Name = "txtApellidoCliente";
             this.txtApellidoCliente.Size = new System.Drawing.Size(248, 25);
             this.txtApellidoCliente.TabIndex = 3;
+            this.txtApellidoCliente.TextChanged += new System.EventHandler(this.txtApellidoCliente_TextChanged);
             // 
             // txtCelularCliente
             // 
@@ -197,6 +236,8 @@ namespace ReservasFINCASA
             this.txtCelularCliente.Name = "txtCelularCliente";
             this.txtCelularCliente.Size = new System.Drawing.Size(248, 25);
             this.txtCelularCliente.TabIndex = 5;
+            this.txtCelularCliente.TextChanged += new System.EventHandler(this.txtCelularCliente_TextChanged);
+            this.txtCelularCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCelularCliente_KeyPress);
             // 
             // txtNombreCliente
             // 
@@ -209,6 +250,7 @@ namespace ReservasFINCASA
             this.txtNombreCliente.Name = "txtNombreCliente";
             this.txtNombreCliente.Size = new System.Drawing.Size(248, 25);
             this.txtNombreCliente.TabIndex = 2;
+            this.txtNombreCliente.TextChanged += new System.EventHandler(this.txtNombreCliente_TextChanged);
             // 
             // txtDNICliente
             // 
@@ -221,12 +263,13 @@ namespace ReservasFINCASA
             this.txtDNICliente.Name = "txtDNICliente";
             this.txtDNICliente.Size = new System.Drawing.Size(248, 25);
             this.txtDNICliente.TabIndex = 1;
+            this.txtDNICliente.TextChanged += new System.EventHandler(this.txtDNICliente_TextChanged);
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(163, 52);
+            this.label12.Location = new System.Drawing.Point(164, 34);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(340, 28);
@@ -565,5 +608,7 @@ namespace ReservasFINCASA
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.DataGridView dgvClientes;
+        private System.Windows.Forms.Button btnCotizar;
+        private System.Windows.Forms.Label lblInstrucciones;
     }
 }

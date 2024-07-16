@@ -8,13 +8,29 @@
     <ProjectGuid>{762F2E16-5B46-43A5-8A2B-6AC4A4BFADE7}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>ReservasFINCASA</RootNamespace>
-    <AssemblyName>ReservasFINCASA</AssemblyName>
+    <AssemblyName>FINCASA</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\Mauricio\Desktop\Instalador y script\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -34,6 +50,21 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>cabaña.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>55E916FBC4081766D0F8F17FC90F1E4D0016E599</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>ReservasFINCASA_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Guna.UI">
@@ -73,13 +104,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClaseAccesoLogin.cs" />
+    <Compile Include="CargarGrids.cs" />
+    <Compile Include="ClsValidar.cs" />
     <Compile Include="ConexionSQL.cs" />
-    <Compile Include="EventForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EventForm.Designer.cs">
-      <DependentUpon>EventForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="fmrRecuperarPassword.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,35 +132,11 @@
     <Compile Include="frmAgregarServiciosExtras.Designer.cs">
       <DependentUpon>frmAgregarServiciosExtras.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCabanhasyServicios.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmCabanhasyServicios.Designer.cs">
-      <DependentUpon>frmCabanhasyServicios.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmCalendario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmCalendario.Designer.cs">
-      <DependentUpon>frmCalendario.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmConsultaFechas.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmConsultaFechas.Designer.cs">
       <DependentUpon>frmConsultaFechas.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmConsultarReservaciones.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmConsultarReservaciones.Designer.cs">
-      <DependentUpon>frmConsultarReservaciones.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmCotizacion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmCotizacion.Designer.cs">
-      <DependentUpon>frmCotizacion.cs</DependentUpon>
     </Compile>
     <Compile Include="frmEnviarReservacion.cs">
       <SubType>Form</SubType>
@@ -140,11 +144,17 @@
     <Compile Include="frmEnviarReservacion.Designer.cs">
       <DependentUpon>frmEnviarReservacion.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmReserva_Servicios.cs">
+    <Compile Include="FrmFechasParaReservas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmReserva_Servicios.Designer.cs">
-      <DependentUpon>frmReserva_Servicios.cs</DependentUpon>
+    <Compile Include="FrmFechasParaReservas.Designer.cs">
+      <DependentUpon>FrmFechasParaReservas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReservaServicios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReservaServicios.Designer.cs">
+      <DependentUpon>frmReservaServicios.cs</DependentUpon>
     </Compile>
     <Compile Include="frmFactura.cs">
       <SubType>Form</SubType>
@@ -170,10 +180,12 @@
     <Compile Include="frmCliente.Designer.cs">
       <DependentUpon>frmCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManejoReservas.cs" />
     <Compile Include="MantenimientoClientes.cs" />
     <Compile Include="MantenimientoServicios.cs" />
     <Compile Include="MantenimientoCabanhas.cs" />
     <Compile Include="MostrarReservas.cs" />
+    <Compile Include="ObtenerCabanhasOcupadas.cs" />
     <Compile Include="Placeholder.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -196,9 +208,6 @@
     <Compile Include="UserControlDays.Designer.cs">
       <DependentUpon>UserControlDays.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="EventForm.resx">
-      <DependentUpon>EventForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="fmrRecuperarPassword.resx">
       <DependentUpon>fmrRecuperarPassword.cs</DependentUpon>
     </EmbeddedResource>
@@ -211,23 +220,17 @@
     <EmbeddedResource Include="frmAgregarServiciosExtras.resx">
       <DependentUpon>frmAgregarServiciosExtras.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCalendario.resx">
-      <DependentUpon>frmCalendario.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmConsultaFechas.resx">
       <DependentUpon>frmConsultaFechas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmConsultarReservaciones.resx">
-      <DependentUpon>frmConsultarReservaciones.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmCotizacion.resx">
-      <DependentUpon>frmCotizacion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmEnviarReservacion.resx">
       <DependentUpon>frmEnviarReservacion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmReserva_Servicios.resx">
-      <DependentUpon>frmReserva_Servicios.cs</DependentUpon>
+    <EmbeddedResource Include="FrmFechasParaReservas.resx">
+      <DependentUpon>FrmFechasParaReservas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReservaServicios.resx">
+      <DependentUpon>frmReservaServicios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmFactura.resx">
       <DependentUpon>frmFactura.cs</DependentUpon>
@@ -266,6 +269,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="ReservasFINCASA_TemporaryKey.pfx" />
     <None Include="Resources\Login.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -456,6 +460,40 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\correo-electronico.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\actualizarCabanha.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eliminarGrid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\guardarfactura.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ComprimidoDetalles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BuscarReservaBoton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logoparafactura.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="cabaña.ico" />
+    <Content Include="cabina.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

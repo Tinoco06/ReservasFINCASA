@@ -12,6 +12,8 @@ namespace ReservasFINCASA
 {
     public partial class UserControlDays : UserControl
     {
+        public static string Static_dayInicio, Static_dayFin, StaticDaySeleccion;
+
         public UserControlDays()
         {
             InitializeComponent();
@@ -27,5 +29,24 @@ namespace ReservasFINCASA
             lbdays.Text = numday + "";
         }
 
+        private void UserControlDays_MouseClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void UserControlDays_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void UserControlDays_Click(object sender, EventArgs e)
+        {
+            Static_dayInicio = lbdays.Text;
+            FrmFechasParaReservas fechas = new FrmFechasParaReservas();
+            fechas.Show();
+
+        }
     }
-}
+    
+    }
+

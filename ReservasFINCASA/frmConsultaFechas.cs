@@ -13,19 +13,16 @@ namespace ReservasFINCASA
 {
     public partial class frmConsultaFechas : Form
     {
-        int month, year;
+        int Month, Year;
+
+        //Variables estaticas para pasarlas al otro form de consulta
+        public static int StaticMonthInicio, StaticYearInicio, StaticMonthFin, StaticYearFin;
 
         public frmConsultaFechas()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            frmFactura factura = new frmFactura();
-            factura.Show();
-            this.Hide();
-        }
 
         private void label7_Click(object sender, EventArgs e)
         {
@@ -46,15 +43,21 @@ namespace ReservasFINCASA
         private void displaDays() {
 
             DateTime now = DateTime.Now;
-            month = now.Month;  
-            year = now.Year;
+            Month = now.Month;  
+            Year = now.Year;
 
-            String monthname = DateTimeFormatInfo.CurrentInfo.GetMonthName(month);
-            LBDATE.Text = monthname + " " + year;
+            String monthname = DateTimeFormatInfo.CurrentInfo.GetMonthName(Month);
+            LBDATE.Text = monthname + " " + Year;
+
+            StaticMonthInicio = Month;
+            StaticYearInicio = Year;
+
+
+            
             //LETS get the first day of the month.
-            DateTime startofthemonth = new DateTime(year, month, 1);
+            DateTime startofthemonth = new DateTime(Year, Month, 1);
             //get the count of days of the month
-            int days = DateTime.DaysInMonth(year, month);
+            int days = DateTime.DaysInMonth(Year, Month);
             //convert the startofthemonth to integer
             int dayoftheweek = Convert.ToInt32(startofthemonth.DayOfWeek.ToString("d")) + 1;
 
@@ -78,81 +81,50 @@ namespace ReservasFINCASA
 
         }
 
-        private void daycontainer_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnAnterior_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        
-
-        private void btnSiguiente_Click(object sender, EventArgs e)
-        {
-        }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            //Limpiar contenedor
+            // Limpiar contenedor
             daycontainer.Controls.Clear();
 
-            //Decrementar el mes para ir al anterior
-            month--;
+            // Decrementar el mes para ir al anterior, pero no ir más atrás del mes actual
+            DateTime now = DateTime.Now;
 
-            String monthname = DateTimeFormatInfo.CurrentInfo.GetMonthName(month);
-            LBDATE.Text = monthname + " " + year;
+            if (Year > now.Year || (Year == now.Year && Month > now.Month))
+            {
+                if (Month > 1)
+                {
+                    Month--;
+                }
+                else if (Month == 1)
+                {
+                    Month = 12;
+                    Year--;
+                }
+            }
 
-            DateTime startofthemonth = new DateTime(year, month, 1);
-            //get the count of days of the month
-            int days = DateTime.DaysInMonth(year, month);
-            //convert the startofthemonth to integer
+            String monthname = DateTimeFormatInfo.CurrentInfo.GetMonthName(Month);
+            LBDATE.Text = monthname + " " + Year;
+
+            // Extraer los días del mes y el día de inicio
+            DateTime startofthemonth = new DateTime(Year, Month, 1);
+            int days = DateTime.DaysInMonth(Year, Month);
             int dayoftheweek = Convert.ToInt32(startofthemonth.DayOfWeek.ToString("d")) + 1;
 
-            //first ets create a blank usercontrol
-
+            // Crear un UserControl en blanco
             for (int i = 1; i < dayoftheweek; i++)
             {
                 UserControlBlank ucblank = new UserControlBlank();
                 daycontainer.Controls.Add(ucblank);
             }
 
-
-            //Crear un usuario de control para los días
+            // Crear un UserControl para los días
             for (int i = 1; i <= days; i++)
             {
                 UserControlDays ucdays = new UserControlDays();
                 ucdays.days(i);
                 daycontainer.Controls.Add(ucdays);
             }
-
         }
 
         private void btnVolverFormCliente_Click(object sender, EventArgs e)
@@ -174,38 +146,55 @@ namespace ReservasFINCASA
 
         private void btnSiguienteMes_Click(object sender, EventArgs e)
         {
-            //Limpiar contenedor
+            // Limpiar contenedor
             daycontainer.Controls.Clear();
 
-            //Incrementar el mes para ir al siguiente
-            month++;
+            // Incrementar el mes para ir al siguiente, pero no ir más allá de 10 meses en el futuro
+            DateTime now = DateTime.Now;
+            DateTime futureLimit = now.AddMonths(10);
 
-            String monthname = DateTimeFormatInfo.CurrentInfo.GetMonthName(month);
-            LBDATE.Text = monthname + " " + year;
+            DateTime currentMonth = new DateTime(Year, Month, 1);
+            DateTime nextMonth = currentMonth.AddMonths(1);
 
-            DateTime startofthemonth = new DateTime(year, month, 1);
-            //get the count of days of the month
-            int days = DateTime.DaysInMonth(year, month);
-            //convert the startofthemonth to integer
+            if (nextMonth <= futureLimit)
+            {
+                // Incrementar el mes y año
+                if (Month == 12)
+                {
+                    Month = 1;
+                    Year++;
+                }
+                else
+                {
+                    Month++;
+                }
+            }
+
+            String monthname = DateTimeFormatInfo.CurrentInfo.GetMonthName(Month);
+            LBDATE.Text = monthname + " " + Year;
+
+            StaticMonthFin = Month;
+            StaticYearFin = Year;
+
+            // Convertir días e inicio de mes
+            DateTime startofthemonth = new DateTime(Year, Month, 1);
+            int days = DateTime.DaysInMonth(Year, Month);
             int dayoftheweek = Convert.ToInt32(startofthemonth.DayOfWeek.ToString("d")) + 1;
 
-            //first ets create a blank usercontrol
-
+            // Crear nuevos UserControl
             for (int i = 1; i < dayoftheweek; i++)
             {
                 UserControlBlank ucblank = new UserControlBlank();
                 daycontainer.Controls.Add(ucblank);
             }
 
-
-            //Crear un usuario de control para los días
+            // Crear un UserControl para los días
             for (int i = 1; i <= days; i++)
             {
                 UserControlDays ucdays = new UserControlDays();
                 ucdays.days(i);
                 daycontainer.Controls.Add(ucdays);
             }
-
         }
     }
-}
+    }

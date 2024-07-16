@@ -13,52 +13,33 @@ namespace ReservasFINCASA
 {
     public partial class frmLogin : Form
     {
+
+
         public frmLogin()
         {
             InitializeComponent();
+            linkRecuperar.Visible = false;
         }
-
-        private void btnIngresar_Click(object sender, EventArgs e)
-        {
-            try
-            {                
-                frmInicio inicio = new frmInicio();
-                inicio.Show();
-
-                this.Hide();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Error al mostrar el formulario frmCliente: " + ex.Message);
-            }
-        }
-
-        private void gunaAdvenceButton1_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void frmLogin_Load(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
+ 
 
         private void btnIngresar_Click_1(object sender, EventArgs e)
         {
-            
-            frmInicio inicio = new frmInicio();
-            inicio.Show();
-            this.Hide();
+
+            ClaseAccesoLogin login = new ClaseAccesoLogin();
+
+            string user = txtUsuario.Text;
+            string pass = txtPassword.Text;
+
+            if (ClaseAccesoLogin.VerificarCredenciales(user, pass))
+            {
+                frmInicio inicio = new frmInicio();
+                inicio.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Usuario o contraseña incorrectos.", "Error de autenticación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
         }
 
@@ -71,5 +52,22 @@ namespace ReservasFINCASA
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void txtUsuario_TextChanged(object sender, EventArgs e)
+        {
+            string textoValidado = ClsValidar.ValidarUsuario(txtUsuario.Text);
+            if (txtUsuario.Text != textoValidado)
+            {
+                txtUsuario.Text = textoValidado;
+                txtUsuario.SelectionStart = txtUsuario.Text.Length; // Mantiene el cursor al final del texto
+            }
+        }
+
+        private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+            txtPassword.Text = ClsValidar.ValidarContrasena(txtPassword.Text);
+            txtPassword.SelectionStart = txtPassword.Text.Length; // Mantiene el cursor al final del texto
+        }
     }
-}
+    }
+

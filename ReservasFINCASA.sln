@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.34301.259
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34525.116
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReservasFINCASA", "ReservasFINCASA\ReservasFINCASA.csproj", "{762F2E16-5B46-43A5-8A2B-6AC4A4BFADE7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Elementos de la solución", "Elementos de la solución", "{AC79427A-CEC1-417F-BF48-C37FA1BB3290}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "FINCASA", "FINCASA\FINCASA.vdproj", "{70796AE9-A875-47AA-95EC-7A4823830484}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,8 @@ Global
 		{762F2E16-5B46-43A5-8A2B-6AC4A4BFADE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{762F2E16-5B46-43A5-8A2B-6AC4A4BFADE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{762F2E16-5B46-43A5-8A2B-6AC4A4BFADE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70796AE9-A875-47AA-95EC-7A4823830484}.Debug|Any CPU.ActiveCfg = Debug
+		{70796AE9-A875-47AA-95EC-7A4823830484}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

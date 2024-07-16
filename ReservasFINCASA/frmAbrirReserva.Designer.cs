@@ -118,7 +118,7 @@
             this.dgvDetalleReserva.Size = new System.Drawing.Size(991, 313);
             this.dgvDetalleReserva.TabIndex = 34;
             this.dgvDetalleReserva.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDetalleReserva_CellClick);
-            this.dgvDetalleReserva.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDetalleReserva_CellContentClick);
+            
             // 
             // btnVolverCliente
             // 

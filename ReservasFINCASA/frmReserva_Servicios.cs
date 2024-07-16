@@ -17,17 +17,15 @@ namespace ReservasFINCASA
     {
 
         private ConexionSQL conexionSQL = new ConexionSQL();
-        String reservaAbrir = "";
 
-        public frmReserva_Servicios(String NombreCliente, String CorreoCliente)
+
+        public frmReserva_Servicios(String NombreCliente)
         {
             InitializeComponent();
             CargarCabañas();
             CargarServicios();
             lblCliente.Text = NombreCliente;
-            lblCorreoCliente.Text = CorreoCliente;
             ExtraerID(NombreCliente);
-            //dgvDetalleCabanhas.CellClick += dgvDetalleCabanhas_CellClick;
         }
 
         public void ExtraerID(string Nombre)
@@ -210,7 +208,6 @@ namespace ReservasFINCASA
                     decimal precioCabaña = decimal.Parse(partes[2].Substring(2)); // Obtener el precio de la cabaña (eliminar el "L.")
                     decimal subtotal = precioCabaña * diferenciaDias;
 
-
                     // Agregar columnas del grid
                     if (dgvDetalleCabanhas.ColumnCount == 0)
                     {
@@ -224,6 +221,7 @@ namespace ReservasFINCASA
 
                     //Agregar una nueva fila al grid
                     dgvDetalleCabanhas.Rows.Add(partes[0], partes[1], partes[2], fechaInicio.ToShortDateString(), fechaFin.ToShortDateString(), subtotal);
+
                     limpiarCabanas();
 
                 }
@@ -242,87 +240,70 @@ namespace ReservasFINCASA
 
         }
 
-        public void ActualizarValor(string IDreserva, string cliente)
+        public void ActualizarValor(string valor)
         {
             // Aquí puedes hacer lo que necesites con el valor recibido
             // Por ejemplo, podrías actualizar un control en este formulario
-            reservaAbrir = IDreserva;
+            String reservaAbrir = valor;
 
-            // Consulta SQL para obtener los datos de las cabañas
-            string queryCabanas = @"SELECT Reservas.ReservaID, DetalleReserva.CabanaID AS ID, Cabañas.Nombre AS Nombre, Cabañas.PrecioPorNoche AS Precio, CONVERT(date, DetalleReserva.FechaInicio) AS Inicio, CONVERT(date, DetalleReserva.FechaFin) AS Fin FROM Reservas LEFT JOIN DetalleReserva ON Reservas.ReservaID = DetalleReserva.ReservaID LEFT JOIN Cabañas ON DetalleReserva.CabanaID = Cabañas.CabanaID WHERE Reservas.ReservaID = @IDReserva;";
-
-            // Consulta SQL para obtener los datos de los servicios
-            string queryServicios = @"SELECT DetalleReservaServicios.ReservaID, ServiciosAdicionales.ServicioID AS ID, ServiciosAdicionales.Nombre AS Nombre, ServiciosAdicionales.Precio AS PrecioUnitario, DetalleReservaServicios.Cantidad, ServiciosAdicionales.Precio * DetalleReservaServicios.Cantidad AS Subtotal FROM DetalleReservaServicios LEFT JOIN ServiciosAdicionales ON DetalleReservaServicios.ServicioID = ServiciosAdicionales.ServicioID WHERE DetalleReservaServicios.ReservaID = @IDReserva;";
+            string queryCabanas = "SELECT * FROM VW_RESERVA_CABAÑAS WHERE ReservaID = @ReservaID";
+            string queryServicios = "SELECT * FROM VW_RESERVA_SERVICIOS WHERE ReservaID = @ReservaID";
 
             // Cargar datos de las cabañas
             using (SqlConnection conexion = conexionSQL.AbrirConexion())
             {
                 SqlCommand command = new SqlCommand(queryCabanas, conexion);
-                command.Parameters.AddWithValue("@IDReserva", IDreserva);
+                command.Parameters.AddWithValue("@ReservaID", valor);
 
                 SqlDataAdapter adapter = new SqlDataAdapter(command);
                 DataTable tableCabanas = new DataTable();
                 adapter.Fill(tableCabanas);
 
-                // Verificar si no hay columnas en el DataGridView
-                if (dgvDetalleCabanhas.ColumnCount == 0)
+                if (!tableCabanas.Columns.Contains("Subtotal"))
                 {
-                    // Agregar las columnas al DataGridView
-                    dgvDetalleCabanhas.Columns.Add("col1", "ID");
-                    dgvDetalleCabanhas.Columns.Add("col2", "Nombre");
-                    dgvDetalleCabanhas.Columns.Add("col3", "Precio");
-                    dgvDetalleCabanhas.Columns.Add("col4", "Inicio");
-                    dgvDetalleCabanhas.Columns.Add("col5", "Fin");
-                    dgvDetalleCabanhas.Columns.Add("col6", "Subtotal");
+                    tableCabanas.Columns.Add("Subtotal", typeof(decimal));
                 }
 
-                // Agregar las filas al DataGridView
+                // Calcular el subtotal para cada fila y asignarlo a la columna correspondiente
                 foreach (DataRow row in tableCabanas.Rows)
                 {
-                    DateTime inicio = (DateTime)row["Inicio"];
-                    DateTime fin = (DateTime)row["Fin"];
-                    int dias = (int)(fin - inicio).TotalDays; // Calcular la diferencia de días
-                    decimal precio = (decimal)row["Precio"];
-                    decimal subtotal = precio * dias; // Calcular el subtotal
-
-                    dgvDetalleCabanhas.Rows.Add(row["ID"], row["Nombre"], precio, inicio.ToString("d/M/yyyy"), fin.ToString("d/M/yyyy"), subtotal);
+                    DateTime inicio = Convert.ToDateTime(row["Inicio"]);
+                    DateTime fin = Convert.ToDateTime(row["Fin"]);
+                    decimal precio = Convert.ToDecimal(row["Precio"]);
+                    int dias = (fin - inicio).Days;
+                    decimal subtotal = dias * precio;
+                    row["Subtotal"] = subtotal;
                 }
-            }
 
+                dgvDetalleCabanhas.DataSource = tableCabanas;
+            }
 
             // Cargar datos de los servicios
             using (SqlConnection conexion = conexionSQL.AbrirConexion())
             {
                 SqlCommand command = new SqlCommand(queryServicios, conexion);
-                command.Parameters.AddWithValue("@IDReserva", IDreserva);
+                command.Parameters.AddWithValue("@ReservaID", valor);
 
                 SqlDataAdapter adapter = new SqlDataAdapter(command);
                 DataTable tableServicios = new DataTable();
                 adapter.Fill(tableServicios);
 
-                // Verificar si no hay columnas en el DataGridView
-                if (dgvDetalleServicios.ColumnCount == 0)
+                if (!tableServicios.Columns.Contains("Subtotal"))
                 {
-                    // Agregar las columnas al DataGridView
-                    dgvDetalleServicios.Columns.Add("col1", "ID");
-                    dgvDetalleServicios.Columns.Add("col2", "Nombre");
-                    dgvDetalleServicios.Columns.Add("col3", "Precio");
-                    dgvDetalleServicios.Columns.Add("col4", "Cantidad");
-                    dgvDetalleServicios.Columns.Add("col5", "Subtotal");
+                    tableServicios.Columns.Add("Subtotal", typeof(decimal));
                 }
 
-                // Agregar las filas al DataGridView
+                // Calcular el subtotal para cada fila y asignarlo a la columna correspondiente
                 foreach (DataRow row in tableServicios.Rows)
                 {
-                    dgvDetalleServicios.Rows.Add(row["ID"], row["Nombre"], row["PrecioUnitario"], row["Cantidad"], row["Subtotal"]);
+                    decimal precioUnitario = Convert.ToDecimal(row["PrecioUnitario"]);
+                    int cantidad = Convert.ToInt32(row["Cantidad"]);
+                    decimal subtotal = precioUnitario * cantidad;
+                    row["Subtotal"] = subtotal;
                 }
+
+                dgvDetalleServicios.DataSource = tableServicios;
             }
-
-            CalcularTotal();
-            ExtraerID(cliente);
-            lblCliente.Text = cliente.ToString();
-
-
         }
 
 
@@ -445,6 +426,85 @@ namespace ReservasFINCASA
                     "Mensaje: " + ex.Message + "\n\n" +
                     "Stack Trace: " + ex.StackTrace);
             }
+
+
+            //try
+            //{
+            //    using (SqlConnection conexion = conexionSQL.AbrirConexion())
+            //    {
+            //        String label = lblCodigo.Text;
+            //        int clienteID = int.Parse(label);
+
+            //        using (SqlTransaction transaction = conexion.BeginTransaction())
+            //        {
+            //            try
+            //            {
+            //                // Insertar la reserva
+            //                DataGridViewCell primeraCelda = dgvDetalleCabanhas.Rows[0].Cells[0];
+            //                String valor = primeraCelda.Value.ToString();
+
+            //                SqlCommand commandReserva = new SqlCommand("INSERT INTO Reservas (ClienteID, CabanaID, FechaInicio, FechaFin, Estado) VALUES (@ClienteID, @CabanaID, @FechaInicio, @FechaFin, 'Confirmada'); SELECT SCOPE_IDENTITY();", conexion, transaction);
+            //                commandReserva.Parameters.AddWithValue("@CabanaID", valor);
+            //                commandReserva.Parameters.AddWithValue("@ClienteID", clienteID);
+            //                commandReserva.Parameters.AddWithValue("@FechaInicio", dtpInicioEstadia.Value.Date);
+            //                commandReserva.Parameters.AddWithValue("@FechaFin", dtpFinEstadia.Value.Date);
+
+            //                int reservaID = Convert.ToInt32(commandReserva.ExecuteScalar());
+
+            //                foreach (DataGridViewRow fila in dgvDetalleCabanhas.Rows)
+            //                {
+            //                    if (!fila.IsNewRow)
+            //                    {
+            //                        string cabanaID = fila.Cells[0].Value.ToString();
+            //                        DateTime fechaInicio = Convert.ToDateTime(fila.Cells[3].Value);
+            //                        DateTime fechaFin = Convert.ToDateTime(fila.Cells[4].Value);
+
+            //                        SqlCommand commandDetalleReserva = new SqlCommand("INSERT INTO DetalleReserva (ReservaID, CabanaID, FechaInicio, FechaFin) VALUES (@ReservaID, @CabanaID, @FechaInicio, @FechaFin);", conexion, transaction);
+            //                        commandDetalleReserva.Parameters.AddWithValue("@ReservaID", reservaID);
+            //                        commandDetalleReserva.Parameters.AddWithValue("@CabanaID", cabanaID);
+            //                        commandDetalleReserva.Parameters.AddWithValue("@FechaInicio", fechaInicio);
+            //                        commandDetalleReserva.Parameters.AddWithValue("@FechaFin", fechaFin);
+
+            //                        commandDetalleReserva.ExecuteNonQuery();
+            //                    }
+            //                }
+
+            //                // Insertar los servicios adicionales asociados a la reserva en la tabla DetalleReservaServicios
+            //                foreach (DataGridViewRow filaServicio in dgvDetalleServicios.Rows)
+            //                {
+            //                    if (!filaServicio.IsNewRow)
+            //                    {
+            //                        string servicioID = filaServicio.Cells[0].Value.ToString();
+            //                        int cantidad = Convert.ToInt32(filaServicio.Cells[3].Value);
+
+            //                        SqlCommand commandDetalleServicio = new SqlCommand("INSERT INTO DetalleReservaServicios (ReservaID, ServicioID, Cantidad) VALUES (@ReservaID, @ServicioID, @Cantidad);", conexion, transaction);
+            //                        commandDetalleServicio.Parameters.AddWithValue("@ReservaID", reservaID);
+            //                        commandDetalleServicio.Parameters.AddWithValue("@ServicioID", servicioID);
+            //                        commandDetalleServicio.Parameters.AddWithValue("@Cantidad", cantidad);
+
+            //                        commandDetalleServicio.ExecuteNonQuery();
+            //                    }
+            //                }
+
+            //                transaction.Commit();
+            //                MessageBox.Show("Reserva insertada correctamente.");
+            //            }
+            //            catch (Exception ex)
+            //            {
+            //                MessageBox.Show("Error al ejecutar la transacción: " + ex.Message);
+            //                transaction.Rollback();
+            //            }
+            //        }
+
+            //        conexion.Close();
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show("Se ha producido una excepción: \n\n" +
+            //        "Mensaje: " + ex.Message + "\n\n" +
+            //        "Stack Trace: " + ex.StackTrace);
+            //}
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -453,184 +513,6 @@ namespace ReservasFINCASA
             abrir.Show();
             this.Hide();
         }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void btnActualizarReserva_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                using (SqlConnection conexion = conexionSQL.AbrirConexion())
-                {
-                    String label = lblCodigo.Text;
-                    int clienteID = int.Parse(label);
-                    String reservaID = "";
-
-                    // Obtener el ID de la reserva de la primera fila del DataGridView
-                    if (dgvDetalleCabanhas.Rows.Count > 0)
-                    {
-                        reservaID = reservaAbrir; // Variable para almacenar el ID de la reserva
-                    }
-                    else
-                    {
-                        MessageBox.Show("Debe agregar al menos una cabaña para actualizar la reserva.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return;
-                    }
-
-                    using (SqlTransaction transaction = conexion.BeginTransaction())
-                    {
-                        try
-                        {
-                            // Actualizar la reserva
-                            SqlCommand commandReserva = new SqlCommand("UPDATE Reservas SET ClienteID = @ClienteID WHERE ReservaID = @ReservaID", conexion, transaction);
-                            commandReserva.Parameters.AddWithValue("@ReservaID", reservaID);
-                            commandReserva.Parameters.AddWithValue("@ClienteID", clienteID);
-                            commandReserva.ExecuteNonQuery();
-
-                            // Eliminar los detalles de reserva existentes
-                            SqlCommand commandDeleteDetalles = new SqlCommand("DELETE FROM DetalleReserva WHERE ReservaID = @ReservaID", conexion, transaction);
-                            commandDeleteDetalles.Parameters.AddWithValue("@ReservaID", reservaID);
-                            commandDeleteDetalles.ExecuteNonQuery();
-
-                            // Eliminar los servicios adicionales existentes
-                            SqlCommand commandDeleteServicios = new SqlCommand("DELETE FROM DetalleReservaServicios WHERE ReservaID = @ReservaID", conexion, transaction);
-                            commandDeleteServicios.Parameters.AddWithValue("@ReservaID", reservaID);
-                            commandDeleteServicios.ExecuteNonQuery();
-
-                            // Agregar los nuevos detalles de reserva
-                            foreach (DataGridViewRow fila in dgvDetalleCabanhas.Rows)
-                            {
-                                if (!fila.IsNewRow)
-                                {
-                                    DateTime fechaInicio = Convert.ToDateTime(fila.Cells[3].Value);
-                                    DateTime fechaFin = Convert.ToDateTime(fila.Cells[4].Value);
-                                    string cabanaID = fila.Cells[0].Value.ToString();
-
-                                    SqlCommand commandDetalleReserva = new SqlCommand("INSERT INTO DetalleReserva (ReservaID, CabanaID, FechaInicio, FechaFin) VALUES (@ReservaID, @CabanaID, @FechaInicio, @FechaFin);", conexion, transaction);
-                                    commandDetalleReserva.Parameters.AddWithValue("@ReservaID", reservaID);
-                                    commandDetalleReserva.Parameters.AddWithValue("@CabanaID", cabanaID);
-                                    commandDetalleReserva.Parameters.AddWithValue("@FechaInicio", fechaInicio);
-                                    commandDetalleReserva.Parameters.AddWithValue("@FechaFin", fechaFin);
-                                    commandDetalleReserva.ExecuteNonQuery();
-                                }
-                            }
-
-                            // Agregar los nuevos servicios adicionales
-                            foreach (DataGridViewRow filaServicio in dgvDetalleServicios.Rows)
-                            {
-                                if (!filaServicio.IsNewRow)
-                                {
-                                    string servicioID = filaServicio.Cells[0].Value.ToString();
-                                    int cantidad = Convert.ToInt32(filaServicio.Cells[3].Value);
-
-                                    SqlCommand commandDetalleServicio = new SqlCommand("INSERT INTO DetalleReservaServicios (ReservaID, ServicioID, Cantidad) VALUES (@ReservaID, @ServicioID, @Cantidad);", conexion, transaction);
-                                    commandDetalleServicio.Parameters.AddWithValue("@ReservaID", reservaID);
-                                    commandDetalleServicio.Parameters.AddWithValue("@ServicioID", servicioID);
-                                    commandDetalleServicio.Parameters.AddWithValue("@Cantidad", cantidad);
-                                    commandDetalleServicio.ExecuteNonQuery();
-                                }
-                            }
-
-                            transaction.Commit();
-                            MessageBox.Show("Reserva actualizada correctamente.");
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show("Error al ejecutar la transacción: " + ex.Message);
-                            transaction.Rollback();
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Se ha producido una excepción: \n\n" +
-                    "Mensaje: " + ex.Message + "\n\n" +
-                    "Stack Trace: " + ex.StackTrace);
-            }
-        }
-
-        private void btnEnviarCorreo_Click(object sender, EventArgs e)
-        {
-            List<int> columnasExcluidas = new List<int> { 0, 2 }; // Excluir la tercera columna (índice 2) y la quinta columna (índice 4)
-            string detalleCabanas = ObtenerDetallesDataGridView(dgvDetalleCabanhas, columnasExcluidas);
-            string detalleServicios = ObtenerDetallesDataGridView(dgvDetalleServicios, columnasExcluidas);
-            string nombreCliente = lblCliente.Text;
-            string correoCliente = lblCorreoCliente.Text;
-
-            // Construir el mensaje de correo electrónico
-            string mensajeCorreo = frmEnviarReservacion.ConstruirMensajeCorreo(detalleCabanas, detalleServicios);
-
-            // Crear instancia de frmEnviarReservacion y pasar los detalles
-            frmEnviarReservacion enviarReservacionForm = new frmEnviarReservacion(detalleCabanas, detalleServicios, nombreCliente, correoCliente);
-            enviarReservacionForm.Show();
-        }
-
-        private string ObtenerDetallesDataGridView(DataGridView dgv, List<int> excludedColumnIndexes)
-        {
-            StringBuilder detallesBuilder = new StringBuilder();
-
-            foreach (DataGridViewRow row in dgv.Rows)
-            {
-                for (int i = 0; i < dgv.Columns.Count; i++)
-                {
-                    if (!excludedColumnIndexes.Contains(i)) // Omitir las columnas excluidas
-                    {
-                        detallesBuilder.Append(row.Cells[i].Value.ToString() + "\t");
-                    }
-                }
-                detallesBuilder.AppendLine();
-            }
-
-            return detallesBuilder.ToString();
-        }
-
-        private void dgvDetalleServicios_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void dgvDetalleCabanhas_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (dgvDetalleCabanhas.CurrentRow != null)
-            {
-                DataGridViewRow filaSeleccionada = dgvDetalleCabanhas.CurrentRow;
-
-                // Obtener el ID de la fila seleccionada usando el índice de la columna
-                string id = filaSeleccionada.Cells[0].Value.ToString();
-
-                // Iterar sobre los elementos del ComboBox para encontrar la coincidencia
-                for (int i = 0; i < cmbCabanhas.Items.Count; i++)
-                {
-                    // Obtener el texto del ComboBox y dividirlo por el separador " - "
-                    string textoComboBox = cmbCabanhas.Items[i].ToString();
-                    string[] partes = textoComboBox.Split(new string[] { " - " }, StringSplitOptions.None);
-                    MessageBox.Show("partes 0> " + partes[0]);
-                    // Verificar si la primera parte del ComboBox (ID) coincide con el ID de la fila seleccionada
-                    if (partes.Length > 0 && partes[0].Trim() == id)
-                    {
-                        // Si hay coincidencia, seleccionar ese elemento en el ComboBox
-                        cmbCabanhas.SelectedIndex = i;
-                        break; // Salir del bucle una vez que se encuentra la coincidencia
-                    }
-                }
-
-
-
-                // Obtener los valores de las celdas de la fila seleccionada
-                string nombre = filaSeleccionada.Cells[1].Value.ToString();
-                string precio = filaSeleccionada.Cells[2].Value.ToString();
-                DateTime fechaInicio = Convert.ToDateTime(filaSeleccionada.Cells[3].Value);
-                DateTime fechaFin = Convert.ToDateTime(filaSeleccionada.Cells[4].Value);
-
-                // Establecer los valores en los controles correspondientes
-                dtpInicioEstadia.Value = fechaInicio;
-                dtpFinEstadia.Value = fechaFin;
-            }
-
-        }
     }
 }
+

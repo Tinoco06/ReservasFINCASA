@@ -49,7 +49,9 @@
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnVolverInicio = new System.Windows.Forms.Button();
-            this.btnLimpiar = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCabanhas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,19 +60,20 @@
             this.txtIDcabaña.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.txtIDcabaña.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtIDcabaña.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIDcabaña.Location = new System.Drawing.Point(159, 130);
+            this.txtIDcabaña.Location = new System.Drawing.Point(158, 161);
             this.txtIDcabaña.Margin = new System.Windows.Forms.Padding(4);
             this.txtIDcabaña.Multiline = true;
             this.txtIDcabaña.Name = "txtIDcabaña";
             this.txtIDcabaña.Size = new System.Drawing.Size(248, 25);
             this.txtIDcabaña.TabIndex = 14;
+            this.txtIDcabaña.TextChanged += new System.EventHandler(this.txtIDcabaña_TextChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(415, 132);
+            this.label3.Location = new System.Drawing.Point(414, 159);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(19, 24);
@@ -81,7 +84,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(155, 101);
+            this.label4.Location = new System.Drawing.Point(154, 128);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(204, 20);
@@ -92,7 +95,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Gadugi", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(321, 39);
+            this.label12.Location = new System.Drawing.Point(316, 24);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(409, 28);
@@ -104,19 +107,20 @@
             this.txtNombreCabanha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.txtNombreCabanha.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNombreCabanha.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreCabanha.Location = new System.Drawing.Point(159, 217);
+            this.txtNombreCabanha.Location = new System.Drawing.Point(158, 244);
             this.txtNombreCabanha.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombreCabanha.Multiline = true;
             this.txtNombreCabanha.Name = "txtNombreCabanha";
             this.txtNombreCabanha.Size = new System.Drawing.Size(248, 25);
             this.txtNombreCabanha.TabIndex = 27;
+            this.txtNombreCabanha.TextChanged += new System.EventHandler(this.txtNombreCabanha_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(415, 218);
+            this.label1.Location = new System.Drawing.Point(414, 245);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(19, 24);
@@ -127,7 +131,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(155, 187);
+            this.label2.Location = new System.Drawing.Point(154, 214);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(185, 20);
@@ -139,18 +143,19 @@
             this.txtDescripcionCabanha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.txtDescripcionCabanha.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDescripcionCabanha.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescripcionCabanha.Location = new System.Drawing.Point(311, 303);
+            this.txtDescripcionCabanha.Location = new System.Drawing.Point(310, 321);
             this.txtDescripcionCabanha.Margin = new System.Windows.Forms.Padding(4);
             this.txtDescripcionCabanha.Multiline = true;
             this.txtDescripcionCabanha.Name = "txtDescripcionCabanha";
             this.txtDescripcionCabanha.Size = new System.Drawing.Size(415, 90);
             this.txtDescripcionCabanha.TabIndex = 30;
+            this.txtDescripcionCabanha.TextChanged += new System.EventHandler(this.txtDescripcionCabanha_TextChanged);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(307, 273);
+            this.label6.Location = new System.Drawing.Point(306, 291);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(107, 20);
@@ -162,19 +167,20 @@
             this.txtPrecioCabanha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.txtPrecioCabanha.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPrecioCabanha.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrecioCabanha.Location = new System.Drawing.Point(629, 134);
+            this.txtPrecioCabanha.Location = new System.Drawing.Point(628, 161);
             this.txtPrecioCabanha.Margin = new System.Windows.Forms.Padding(4);
             this.txtPrecioCabanha.Multiline = true;
             this.txtPrecioCabanha.Name = "txtPrecioCabanha";
             this.txtPrecioCabanha.Size = new System.Drawing.Size(248, 25);
             this.txtPrecioCabanha.TabIndex = 32;
+            this.txtPrecioCabanha.TextChanged += new System.EventHandler(this.txtPrecioCabanha_TextChanged);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Red;
-            this.label5.Location = new System.Drawing.Point(885, 135);
+            this.label5.Location = new System.Drawing.Point(884, 162);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(19, 24);
@@ -185,7 +191,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(625, 105);
+            this.label7.Location = new System.Drawing.Point(624, 132);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(148, 20);
@@ -197,19 +203,20 @@
             this.txtCapacidadCabanha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.txtCapacidadCabanha.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCapacidadCabanha.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCapacidadCabanha.Location = new System.Drawing.Point(629, 217);
+            this.txtCapacidadCabanha.Location = new System.Drawing.Point(628, 244);
             this.txtCapacidadCabanha.Margin = new System.Windows.Forms.Padding(4);
             this.txtCapacidadCabanha.Multiline = true;
             this.txtCapacidadCabanha.Name = "txtCapacidadCabanha";
             this.txtCapacidadCabanha.Size = new System.Drawing.Size(248, 25);
             this.txtCapacidadCabanha.TabIndex = 35;
+            this.txtCapacidadCabanha.TextChanged += new System.EventHandler(this.txtCapacidadCabanha_TextChanged);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Red;
-            this.label8.Location = new System.Drawing.Point(885, 218);
+            this.label8.Location = new System.Drawing.Point(884, 245);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(19, 24);
@@ -220,7 +227,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(625, 187);
+            this.label9.Location = new System.Drawing.Point(624, 214);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(98, 20);
@@ -259,7 +266,7 @@
             this.btnEliminar.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.Image = global::ReservasFINCASA.Properties.Resources.btnEliminar;
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnEliminar.Location = new System.Drawing.Point(575, 677);
+            this.btnEliminar.Location = new System.Drawing.Point(774, 677);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(133, 112);
@@ -276,7 +283,7 @@
             this.btnModificar.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnModificar.Image = global::ReservasFINCASA.Properties.Resources.btnModificar;
             this.btnModificar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnModificar.Location = new System.Drawing.Point(354, 677);
+            this.btnModificar.Location = new System.Drawing.Point(455, 677);
             this.btnModificar.Margin = new System.Windows.Forms.Padding(4);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(133, 112);
@@ -321,22 +328,41 @@
             this.btnVolverInicio.UseVisualStyleBackColor = false;
             this.btnVolverInicio.Click += new System.EventHandler(this.btnVolverInicio_Click);
             // 
-            // btnLimpiar
+            // label10
             // 
-            this.btnLimpiar.FlatAppearance.BorderSize = 0;
-            this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLimpiar.Font = new System.Drawing.Font("Gadugi", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpiar.Image = global::ReservasFINCASA.Properties.Resources.limpiarCampos;
-            this.btnLimpiar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnLimpiar.Location = new System.Drawing.Point(774, 677);
-            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(133, 112);
-            this.btnLimpiar.TabIndex = 47;
-            this.btnLimpiar.Text = "Limpiar";
-            this.btnLimpiar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnLimpiar.UseVisualStyleBackColor = true;
-            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Gadugi", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(165, 70);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(711, 20);
+            this.label10.TabIndex = 47;
+            this.label10.Text = "Este espacio le permite agregar nuevas cabañas o modificar la información de las " +
+    "existentes.";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Gadugi", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(125, 423);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(486, 16);
+            this.label11.TabIndex = 48;
+            this.label11.Text = "* Si desea modificar o eliminar la información haga click en un registro de la ta" +
+    "bla";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Gadugi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.Red;
+            this.label13.Location = new System.Drawing.Point(733, 321);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(19, 24);
+            this.label13.TabIndex = 49;
+            this.label13.Text = "*";
             // 
             // frmAgregarCabanha
             // 
@@ -344,7 +370,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1067, 907);
-            this.Controls.Add(this.btnLimpiar);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnAgregar);
@@ -399,6 +427,8 @@
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.Button btnLimpiar;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label13;
     }
 }
