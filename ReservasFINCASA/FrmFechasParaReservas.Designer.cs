@@ -185,12 +185,13 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Gadugi", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Gadugi", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(75, 40);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(515, 27);
+            this.label3.Size = new System.Drawing.Size(513, 21);
             this.label3.TabIndex = 47;
-            this.label3.Text = "Seleccione las fechas para realizar una consulta";
+            this.label3.Text = "Seleccione las fechas para realizar una consulta de cabañas";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // FrmFechasParaReservas
             // 
