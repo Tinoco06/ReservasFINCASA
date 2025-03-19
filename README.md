@@ -1,5 +1,5 @@
 ## Descripción
-**FINCASA** es un sistema de gestión de reservas desarrollado en la clase de Desarrollo de Software.
+**FINCASA** es un sistema de gestión de reservas realizado en la clase de Desarrollo de Software. Está desarrollado en C# y SQL Server.
 
 El sistema cuenta con la impresión de facturas y cotizaciones, gestión de habitaciones y servicios, además de contar con una confirmación mediante correo electrónico a los clientes.
 
